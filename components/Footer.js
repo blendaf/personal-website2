@@ -1,0 +1,69 @@
+import Link from 'next/link'
+import styled from 'styled-components'
+import screenSizes from '../utils/screen-sizes'
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  cursor: default;
+  margin-bottom: 80px;
+  margin-top: 80px;
+`
+
+const Copyright = styled.p`
+  text-align: center;
+`
+
+const Photocredit = styled.div`
+  display: flex;
+  justify-content: center;
+  font-size: 10px;
+`
+
+const StyledLink = styled.a`
+  cursor: pointer;
+  margin: 0px 2px;
+  color: ${({ theme }) => theme.colors.black};
+  text-decoration: none;
+  transition-duration: 0.5s;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.hoverBlue};
+  }
+`
+
+const Footer = () => {
+  return (
+    <Wrapper>
+      <Copyright>Copyright Blenda Fröjdh 2021</Copyright>
+
+      <Photocredit>
+        Photographs by
+        <StyledLink href="https://unsplash.com/@mattiasdiesel">
+          Mattias Diesel,{' '}
+        </StyledLink>
+        <StyledLink href="https://unsplash.com/@adigold1">
+          Adi Goldstein,{' '}
+        </StyledLink>
+        <StyledLink href="https://unsplash.com/@hush52">
+          Hush Naidoo,{' '}
+        </StyledLink>
+        <StyledLink href="https://unsplash.com/@neonbrand">
+          NeONBRAND,{' '}
+        </StyledLink>
+        <StyledLink href="https://unsplash.com/@jonasleupe">
+          Jonas Leupe,{' '}
+        </StyledLink>
+        <StyledLink href="https://unsplash.com/@hejohnnyme">
+          Nikola Johnny Mirkovic, and{' '}
+        </StyledLink>
+        <StyledLink href="https://unsplash.com/@pinho">Pinho </StyledLink> on{' '}
+        Unsplash
+      </Photocredit>
+    </Wrapper>
+  )
+}
+
+export default Footer
