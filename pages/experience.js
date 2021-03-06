@@ -43,7 +43,7 @@ const ExperienceWrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 100px;
+  margin: 100px 0px;
 `
 
 const ExperienceTitle = styled.h3`
