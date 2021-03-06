@@ -1,6 +1,6 @@
 import Link from 'next/link'
 // import { useContext } from 'react'
-// import { useRouter } from 'next/router'
+import { useRouter } from 'next/router'
 import styled from 'styled-components'
 import screenSizes from '../utils/screen-sizes'
 // import profile from './profile.jpg'
@@ -62,13 +62,17 @@ const Header = () => {
       <Projects>
         <ProjectsColumn>
           <ProjectImage background={'news.jpg'}>
-            <ProjectTitle>Project Title</ProjectTitle>
+            <Link key={1} href="/article/[articleId]" as={`/article/${1}`}>
+              <ProjectTitle>Project Title</ProjectTitle>
+            </Link>
           </ProjectImage>
           <ProjectImage background={'Furhat.png'}>
             <ProjectTitle>Project Title</ProjectTitle>
           </ProjectImage>
           <ProjectImage background={'construct.jpeg'}>
-            <ProjectTitle>Project Title</ProjectTitle>
+            <Link key={4} href="/article/[articleId]" as={`/article/${4}`}>
+              <ProjectTitle>Project Title</ProjectTitle>
+            </Link>
           </ProjectImage>
         </ProjectsColumn>
         <ProjectsColumnMiddle>
@@ -82,12 +86,16 @@ const Header = () => {
             <ProjectTitle>Project Title</ProjectTitle>
           </ProjectImage>
           <ProjectImage background={'construct.jpeg'}>
-            <ProjectTitle>Project Title</ProjectTitle>
+            <Link key={3} href={`/?postId=${3}`} as={`/post/${3}`}>
+              <ProjectTitle>Project Title</ProjectTitle>
+            </Link>
           </ProjectImage>
         </ProjectsColumnMiddle>
         <ProjectsColumn>
           <ProjectImage background={'construct.jpeg'}>
-            <ProjectTitle>Project Title</ProjectTitle>
+            <Link key={2} href={`/?postId=${2}`} as={`/post/${2}`}>
+              <ProjectTitle>Project Title</ProjectTitle>
+            </Link>
           </ProjectImage>
           <ProjectImage background={'construct.jpeg'}>
             <ProjectTitle>Project Title</ProjectTitle>

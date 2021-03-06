@@ -87,8 +87,28 @@ const Experience = () => (
           January 2021 - June 2021 <br />
           Master thesis student
         </ExperienceDescription>
-        <ExperienceDescription>Some text</ExperienceDescription>
+        {/* <ExperienceDescription>Some text</ExperienceDescription> */}
         <ExperienceLine />
+        <ExperienceTitle>Proximion</ExperienceTitle>
+        <ExperienceDescription>
+          December 2020 - January 2021 <br />
+          UX Consultant
+        </ExperienceDescription>
+        {/* <ExperienceDescription>Some text</ExperienceDescription> */}
+        <ExperienceLine />
+        <ExperienceTitle>Cantemo</ExperienceTitle>
+        <ExperienceDescription>
+          March 2020 - September 2020 <br />
+          Tester
+        </ExperienceDescription>
+        {/* <ExperienceDescription>Some text</ExperienceDescription> */}
+        <ExperienceLine />
+        <ExperienceTitle>Hello World!</ExperienceTitle>
+        <ExperienceDescription>
+          JMarch 2019 - September 2018 <br />
+          Programming Teacher
+        </ExperienceDescription>
+        {/* <ExperienceDescription>Some text</ExperienceDescription> */}
       </ExperienceWrapper>
     </Container>
   </>
