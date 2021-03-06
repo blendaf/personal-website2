@@ -1,9 +1,7 @@
 import Link from 'next/link'
-// import { useContext } from 'react'
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
 import screenSizes from '../utils/screen-sizes'
-// import profile from './profile.jpg'
 
 const Container = styled.div`
   width: 80%;
@@ -54,6 +52,7 @@ const ProjectImage = styled.div`
 
 const ProjectTitle = styled.h3`
   color: ${({ theme }) => theme.colors.white};
+  text-align: center;
 `
 
 const Header = () => {
@@ -61,48 +60,62 @@ const Header = () => {
     <Container>
       <Projects>
         <ProjectsColumn>
-          <ProjectImage background={'news.jpg'}>
-            <Link key={1} href="/article/[articleId]" as={`/article/${1}`}>
+          <Link key={1} href={`/?postId=${1}`} as={`/post/${1}`}>
+            <ProjectImage background={'tv.jpg'}>
+              <ProjectTitle>Usability Evaluation of HBO Nordic</ProjectTitle>
+            </ProjectImage>
+          </Link>
+          <Link key={4} href={`/?postId=${4}`} as={`/post/${4}`}>
+            <ProjectImage background={'construct.jpeg'}>
+              <ProjectTitle>Konstruct Title</ProjectTitle>
+            </ProjectImage>
+          </Link>
+          <Link key={7} href={`/?postId=${7}`} as={`/post/${7}`}>
+            <ProjectImage background={'construct.jpeg'}>
               <ProjectTitle>Project Title</ProjectTitle>
-            </Link>
-          </ProjectImage>
-          <ProjectImage background={'Furhat.png'}>
-            <ProjectTitle>Project Title</ProjectTitle>
-          </ProjectImage>
-          <ProjectImage background={'construct.jpeg'}>
-            <Link key={4} href="/article/[articleId]" as={`/article/${4}`}>
-              <ProjectTitle>Project Title</ProjectTitle>
-            </Link>
-          </ProjectImage>
+            </ProjectImage>
+          </Link>
         </ProjectsColumn>
         <ProjectsColumnMiddle>
-          <ProjectImage background={'commuter.jpg'}>
-            <ProjectTitle>Project Title</ProjectTitle>
-          </ProjectImage>
-          <ProjectImage background={'ewallet.jpg'}>
-            <ProjectTitle>Project Title</ProjectTitle>
-          </ProjectImage>
-          <ProjectImage background={'event.jpg'}>
-            <ProjectTitle>Project Title</ProjectTitle>
-          </ProjectImage>
-          <ProjectImage background={'construct.jpeg'}>
-            <Link key={3} href={`/?postId=${3}`} as={`/post/${3}`}>
+          <Link key={2} href={`/?postId=${2}`} as={`/post/${2}`}>
+            <ProjectImage background={'news.jpg'}>
+              <ProjectTitle>
+                Master Thesis: The News Tips Process at BT
+              </ProjectTitle>
+            </ProjectImage>
+          </Link>
+          <Link key={5} href={`/?postId=${5}`} as={`/post/${5}`}>
+            <ProjectImage background={'ewallet.jpg'}>
               <ProjectTitle>Project Title</ProjectTitle>
-            </Link>
-          </ProjectImage>
+            </ProjectImage>
+          </Link>
+          <Link key={8} href={`/?postId=${8}`} as={`/post/${8}`}>
+            <ProjectImage background={'event.jpg'}>
+              <ProjectTitle>Project Title</ProjectTitle>
+            </ProjectImage>
+          </Link>
+          <Link key={10} href={`/?postId=${10}`} as={`/post/${10}`}>
+            <ProjectImage background={'event.jpg'}>
+              <ProjectTitle>Project Title</ProjectTitle>
+            </ProjectImage>
+          </Link>
         </ProjectsColumnMiddle>
         <ProjectsColumn>
-          <ProjectImage background={'construct.jpeg'}>
-            <Link key={2} href={`/?postId=${2}`} as={`/post/${2}`}>
+          <Link key={3} href={`/?postId=${3}`} as={`/post/${3}`}>
+            <ProjectImage background={'construct.jpeg'}>
+              <ProjectTitle>Konstruct: An Outdoor Art Gallery</ProjectTitle>
+            </ProjectImage>
+          </Link>
+          <Link key={6} href={`/?postId=${6}`} as={`/post/${6}`}>
+            <ProjectImage background={'construct.jpeg'}>
               <ProjectTitle>Project Title</ProjectTitle>
-            </Link>
-          </ProjectImage>
-          <ProjectImage background={'construct.jpeg'}>
-            <ProjectTitle>Project Title</ProjectTitle>
-          </ProjectImage>
-          <ProjectImage background={'construct.jpeg'}>
-            <ProjectTitle>Project Title</ProjectTitle>
-          </ProjectImage>
+            </ProjectImage>
+          </Link>
+          <Link key={9} href={`/?postId=${9}`} as={`/post/${9}`}>
+            <ProjectImage background={'construct.jpeg'}>
+              <ProjectTitle>Project Title</ProjectTitle>
+            </ProjectImage>
+          </Link>
         </ProjectsColumn>
       </Projects>
     </Container>

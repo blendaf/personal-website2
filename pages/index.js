@@ -2,10 +2,9 @@ import styled from 'styled-components'
 import Header from '../components/Header'
 import { useRouter } from 'next/router'
 import Modal from 'react-modal'
-import Post from '../components/Post'
+import ModalContent from '../components/ModalContent'
 import Projects from '../components/Projects'
 import Footer from '../components/Footer'
-import Grid from '../components/Grid'
 
 Modal.setAppElement('#__next')
 
@@ -19,10 +18,15 @@ const Home = () => {
         isOpen={!!router.query.postId}
         onRequestClose={() => router.push('/')}
         contentLabel="Post modal"
+        style={{
+          content: {
+            borderRadius: '20px',
+            padding: '0px',
+          },
+        }}
       >
-        <Post id={router.query.postId} pathname={router.pathname} />
+        <ModalContent id={router.query.postId} pathname={router.pathname} />
       </Modal>
-      {/* <Grid /> */}
       <Projects />
       <Footer />
     </>

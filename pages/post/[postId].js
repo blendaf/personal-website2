@@ -1,11 +1,15 @@
 import { useRouter } from 'next/router'
-import Post from '../../components/Post'
+import ModalContent from '../../components/ModalContent'
 
 const PostPage = () => {
   const router = useRouter()
   const { postId } = router.query
 
-  return <Post id={postId} pathname={router.pathname} />
+  return (
+    <>
+      <ModalContent id={postId} pathname={router.pathname} />
+    </>
+  )
 }
 
 export default PostPage
