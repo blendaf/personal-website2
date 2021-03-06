@@ -1,13 +1,9 @@
-import Link from 'next/link'
-// import { useContext } from 'react'
-// import { useRouter } from 'next/router'
 import styled from 'styled-components'
 import screenSizes from '../utils/screen-sizes'
 import Navbar from './Navbar'
 import { Github } from '@styled-icons/boxicons-logos'
 import { AlternateEmail } from '@styled-icons/material'
 import { LinkedinWithCircle } from '@styled-icons/entypo-social'
-// import profile from './profile.jpg'
 
 const Container = styled.div`
   width: 80%;
@@ -33,7 +29,7 @@ const ProfileImage = styled.div`
   height: 300px;
   border-radius: 50%;
   margin-right: 25px;
-  background-image: url('profile.jpg');
+  background-image: url('/profile.jpg');
   background-size: cover;
 `
 

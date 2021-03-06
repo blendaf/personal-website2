@@ -1,13 +1,58 @@
+import Link from 'next/link'
 import styled from 'styled-components'
+import { Cross } from '@styled-icons/entypo/Cross'
 
 export const Container = styled.div`
-  width: 84%;
-  margin: 0 auto;
+  display: flex;
+  min-height: 100%;
+  align-items: center;
 `
 
+const ContactIcon = styled.a`
+  background-color: transparent;
+  border: none;
+  margin-right: 20px;
+  margin-top: 10px;
+  border-radius: 50px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+`
+
+const StyledIcon = styled.svg`
+  color: ${({ theme }) => theme.colors.black};
+  width: 40px;
+
+  transform: translateZ(0);
+  transition-duration: 0.3s;
+  transition-property: transform;
+  display: inline-block;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.hoverBlue};
+    transform: scale(1.1);
+  }
+`
+
+export const Back = () => (
+  <Link href={`/`}>
+    <ContactIcon>
+      <StyledIcon as={Cross}></StyledIcon>
+    </ContactIcon>
+  </Link>
+)
+
 export const ProjectWrapper = styled.div`
+  width: 84%;
+  margin: 0 auto;
+  padding: 40px 0px;
+`
+
+export const ProjectInfoWrapper = styled.div`
   display: flex;
-  padding: 20px 0px;
+  /* padding-top: 60px; */
 `
 
 export const ProjectImage = styled.img`

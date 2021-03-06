@@ -19,9 +19,17 @@ const Home = () => {
         onRequestClose={() => router.push('/')}
         contentLabel="Post modal"
         style={{
+          overlay: {
+            backgroundColor: 'rgba(193, 198, 199, 0.8)',
+          },
           content: {
-            borderRadius: '20px',
+            borderRadius: '4px',
             padding: '0px',
+            top: '60px',
+            left: '100px',
+            right: '100px',
+            bottom: '60px',
+            border: '1px solid rgba(193, 198, 199, 0.8)',
           },
         }}
       >
@@ -40,4 +48,5 @@ export default Home
 // 2. Add text to experience and education
 // 3. Add bubble effect to projects
 // 4. Fix mailto
-//
+// 5. Fix active link/page in navbar
+// 6. Add text to projects

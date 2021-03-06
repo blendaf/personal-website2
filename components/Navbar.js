@@ -28,17 +28,17 @@ const Navbar = () => {
   return (
     <NavWrapper>
       <Link href="/">
-        <StyledLink>BIO</StyledLink>
+        <StyledLink>PROJECTS</StyledLink>
       </Link>
       <Link href="/experience">
         <StyledLink>EXPERIENCE</StyledLink>
       </Link>
-      <Link href="/">
+      {/* <Link href="/">
         <StyledLink>SKILLS</StyledLink>
       </Link>
       <Link href="/">
         <StyledLink>HOME</StyledLink>
-      </Link>
+      </Link> */}
     </NavWrapper>
 
     // <NavWrapper>

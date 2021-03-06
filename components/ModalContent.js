@@ -1,21 +1,12 @@
-import styled from 'styled-components'
 import {
   Project1,
   Project2,
   Project3,
-  // Project4,
-  // Project5,
+  Project4,
+  Project5,
+  Project6,
+  Project7,
 } from './ProjectsModal'
-
-const PostStyled = styled.div`
-  width: 100%;
-  height: 100%;
-  background-color: darkcyan;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
 
 const ModalContent = ({ id }) => {
   switch (id) {
@@ -39,15 +30,6 @@ const ModalContent = ({ id }) => {
       break
     case '7':
       return <Project7 />
-      break
-    case '8':
-      return <Project8 />
-      break
-    case '9':
-      return <Project9 />
-      break
-    case '10':
-      return <Project10 />
       break
     default:
       return <p>{id}</p>
