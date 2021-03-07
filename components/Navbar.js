@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import styled from 'styled-components'
+import { useRouter } from 'next/router'
 import screenSizes from '../utils/screen-sizes'
 
 const NavWrapper = styled.div`
@@ -8,6 +9,7 @@ const NavWrapper = styled.div`
   justify-content: space-evenly;
   cursor: default;
   margin: 50px auto;
+  color: ${({ theme }) => theme.colors.black};
 `
 
 const StyledLink = styled.a`
@@ -15,21 +17,29 @@ const StyledLink = styled.a`
   transform: translateZ(0);
   transition-duration: 0.3s;
   transition-property: transform;
+  color: ${(props) =>
+    props.active ? props.theme.colors.hoverBlue : props.theme.colors.black};
 
   &:hover {
     color: ${({ theme }) => theme.colors.hoverBlue};
     transform: scale(1.1);
   }
+
+  &:active {
+    color: ${({ theme }) => theme.colors.activeBlue};
+  }
 `
 
 const Navbar = () => {
+  const router = useRouter()
+
   return (
     <NavWrapper>
       <Link href="/">
-        <StyledLink>PROJECTS</StyledLink>
+        <StyledLink active={router.pathname === '/'}>PROJECTS</StyledLink>
       </Link>
       <Link href="/experience">
-        <StyledLink>EXPERIENCE</StyledLink>
+        <StyledLink active={router.pathname !== '/'}>EXPERIENCE</StyledLink>
       </Link>
       {/* <Link href="/">
         <StyledLink>SKILLS</StyledLink>
@@ -38,30 +48,6 @@ const Navbar = () => {
         <StyledLink>HOME</StyledLink>
       </Link> */}
     </NavWrapper>
-
-    // <NavWrapper>
-    //   <TitleWrapper>
-    //     <Link href="/" passHref>
-    //       <StyledLink active={pathname === '/'}>
-    //         <div>
-    //           <Title>speak.</Title>
-    //           <Title mutedColor>exchange</Title>
-    //         </div>
-    //         <Subtitle>bilingual dictionary</Subtitle>
-    //       </StyledLink>
-    //     </Link>
-    //     <Link href={fbContext.user ? '/repeat' : '/all-decks'} passHref>
-    //       <StyledLink active={pathname !== '/'}>
-    //         <div>
-    //           <Title>speak.</Title>
-    //           <Title mutedColor>repeat</Title>
-    //         </div>
-    //         <Subtitle>vocabulary trainer</Subtitle>
-    //       </StyledLink>
-    //     </Link>
-    //   </TitleWrapper>
-    //   <LogInButton />
-    // </NavWrapper>
   )
 }
 

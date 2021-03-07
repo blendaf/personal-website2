@@ -6,9 +6,10 @@
 const theme = {
   colors: {
     white: '#fff',
-    black: '#000',
-    hoverBlue: 'rgb(137, 151, 153)',
+    black: 'rgba(33, 33, 33, 1)',
+    hoverBlue: 'rgba(42, 174, 198, 1)',
     hoverBlack: 'rgba(40, 45, 46, 0.5 )',
+    activeBlue: 'rgba(25, 104, 118, 1)',
     // danger: 'hsl(0, 95%, 40%)',
     // dangerMuted: 'hsl(0, 100%, 95%)',
   },

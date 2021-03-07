@@ -6,6 +6,7 @@ import Footer from '../components/Footer'
 const Container = styled.div`
   width: 80%;
   margin: 0 auto;
+  color: ${({ theme }) => theme.colors.black};
 `
 const Title = styled.h2`
   color: ${({ theme }) => theme.colors.primary};
@@ -37,6 +38,10 @@ const StyledLink = styled.a`
   &:hover {
     color: ${({ theme }) => theme.colors.hoverBlue};
     transform: scale(1.1);
+  }
+
+  &:active {
+    color: ${({ theme }) => theme.colors.activeBlue};
   }
 `
 

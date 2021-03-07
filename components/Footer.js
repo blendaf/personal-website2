@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import styled from 'styled-components'
 import screenSizes from '../utils/screen-sizes'
 
@@ -9,6 +8,7 @@ const Wrapper = styled.div`
   justify-content: center;
   cursor: default;
   margin: 50px 0;
+  color: ${({ theme }) => theme.colors.black};
 `
 
 const Copyright = styled.p`

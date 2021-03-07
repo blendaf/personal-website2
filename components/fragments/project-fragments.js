@@ -6,6 +6,7 @@ export const Container = styled.div`
   display: flex;
   min-height: 100%;
   align-items: center;
+  color: ${({ theme }) => theme.colors.black};
 `
 
 const ContactIcon = styled.a`
@@ -83,6 +84,7 @@ export const About = styled.div``
 
 export const Title = styled.h2`
   text-align: center;
+  color: ${({ theme }) => theme.colors.black};
 `
 
 export const Images = styled.div`

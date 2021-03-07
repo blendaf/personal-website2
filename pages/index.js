@@ -45,9 +45,7 @@ const Home = () => {
 export default Home
 
 // TODO
-// 1. Compress project images
 // 2. Add text to experience and education
-// 3. Add bubble effect to projects
 // 4. Fix mailto
 // 5. Fix active link/page in navbar
 // 6. Add text to projects

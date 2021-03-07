@@ -8,6 +8,7 @@ import ScrollAnimation from 'react-animate-on-scroll'
 const Container = styled.div`
   width: 80%;
   margin: 0 auto;
+  color: ${({ theme }) => theme.colors.black};
 
   @media screen and (max-width: ${screenSizes.tablet.max}) {
   }

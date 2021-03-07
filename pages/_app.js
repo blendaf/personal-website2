@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Quicksand', sans-serif;
     font-weight: 400;
+    
   }
 
   h1,h2,h3 {

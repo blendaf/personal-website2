@@ -8,6 +8,7 @@ import { LinkedinWithCircle } from '@styled-icons/entypo-social'
 const Container = styled.div`
   width: 80%;
   margin: 0 auto;
+  color: ${({ theme }) => theme.colors.black};
 
   @media screen and (max-width: ${screenSizes.tablet.max}) {
   }
@@ -60,6 +61,14 @@ const ContactIcon = styled.a`
   margin-right: 20px;
   margin-top: 10px;
   border-radius: 50px;
+  &:hover > * {
+    color: ${({ theme }) => theme.colors.hoverBlue};
+    transform: scale(1.1);
+  }
+
+  &:active > * {
+    color: ${({ theme }) => theme.colors.activeBlue};
+  }
 `
 
 const StyledIcon = styled.svg`
@@ -72,11 +81,6 @@ const StyledIcon = styled.svg`
   display: inline-block;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   backface-visibility: hidden;
-
-  &:hover {
-    color: ${({ theme }) => theme.colors.hoverBlue};
-    transform: scale(1.1);
-  }
 `
 
 const Header = () => {
