@@ -47,28 +47,6 @@ export const Project1 = () => {
       <Back />
       <ProjectWrapper>
         <ProjectInfoWrapper>
-          <ProjectImage src={'/medium/news.jpg'}></ProjectImage>
-          <ProjectInfo>
-            <About>
-              <Title> Master Thesis: The News Tips Process at BT</Title>I am
-              conducting a user research and design project with the aim of
-              gaining insight into readers relationship to providing Bergens
-              Tidende with news tip and improving the design of the digital news
-              tip function.
-            </About>
-          </ProjectInfo>
-        </ProjectInfoWrapper>
-      </ProjectWrapper>
-    </Container>
-  )
-}
-
-export const Project2 = () => {
-  return (
-    <Container>
-      <Back />
-      <ProjectWrapper>
-        <ProjectInfoWrapper>
           <ProjectImage src={'/medium/tv.jpg'}></ProjectImage>
           <ProjectInfo>
             <About>
@@ -79,6 +57,27 @@ export const Project2 = () => {
               qualitative data was collected and analysed. The main focus of the
               study was the efficiency and satsifaction of the streaming
               service.
+            </About>
+          </ProjectInfo>
+        </ProjectInfoWrapper>
+      </ProjectWrapper>
+    </Container>
+  )
+}
+export const Project2 = () => {
+  return (
+    <Container>
+      <Back />
+      <ProjectWrapper>
+        <ProjectInfoWrapper>
+          <ProjectImage src={'/medium/news.jpg'}></ProjectImage>
+          <ProjectInfo>
+            <About>
+              <Title> Master Thesis: The News Tips Process at BT</Title>I am
+              conducting a user research and design project with the aim of
+              gaining insight into readers relationship to providing Bergens
+              Tidende with news tip and improving the design of the digital news
+              tip function.
             </About>
           </ProjectInfo>
         </ProjectInfoWrapper>

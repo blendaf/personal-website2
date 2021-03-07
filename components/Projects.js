@@ -18,15 +18,15 @@ const Container = styled.div`
 
 const Projects = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
   margin-top: 30px;
+  justify-content: center;
+  align-items: center;
 `
 
-const ProjectsColumn = styled.div`
-  padding-top: 175px;
+const ProjectsRow = styled.div`
+  display: flex;
 `
-
-const ProjectsColumnMiddle = styled.div``
 
 const ProjectImage = styled.div`
   width: 300px;
@@ -41,13 +41,16 @@ const ProjectImage = styled.div`
   align-items: center;
   cursor: pointer;
 
+  transform: ${(props) => (props.middle ? 'none' : 'translateY(200px)')};
+
   transition-duration: 0.8s;
   transition-property: transform;
   box-shadow: ${({ theme }) => theme.boxShadow.regular};
   backface-visibility: hidden;
 
   &:hover {
-    transform: scale(1.1);
+    transform: ${(props) =>
+      props.middle ? 'scale(1.1)' : 'translateY(200px) scale(1.1)'};
     box-shadow: ${({ theme }) => theme.boxShadow.intense};
   }
 `
@@ -63,15 +66,16 @@ const Header = () => {
   return (
     <Container>
       <Projects>
-        <ProjectsColumn>
+        <ProjectsRow>
           <ScrollAnimation
+            offset={400}
             animateIn="animate__fadeIn"
             animatePreScroll={false}
             animateOnce={true}
             duration={2}
             delay={10}
           >
-            <Link key={2} href={`/?postId=${2}`} as={`/post/${2}`}>
+            <Link key={1} href={`/?postId=${1}`} as={`/post/${1}`}>
               <ProjectImage background={'/tv.jpg'}>
                 <ProjectTitle>Usability Evaluation of HBO Nordic</ProjectTitle>
               </ProjectImage>
@@ -82,27 +86,10 @@ const Header = () => {
             animatePreScroll={false}
             animateOnce={true}
             duration={2}
-            delay={10}
-          >
-            <Link key={5} href={`/?postId=${5}`} as={`/post/${5}`}>
-              <ProjectImage background={'/Furhat.png'}>
-                <ProjectTitle>
-                  Teaching A Robot How To Cook: A Study of Embodiment
-                </ProjectTitle>
-              </ProjectImage>
-            </Link>
-          </ScrollAnimation>
-        </ProjectsColumn>
-        <ProjectsColumnMiddle>
-          <ScrollAnimation
-            animateIn="animate__fadeIn"
-            animatePreScroll={false}
-            animateOnce={true}
-            duration={2}
             delay={2}
           >
-            <Link key={1} href={`/?postId=${1}`} as={`/post/${1}`}>
-              <ProjectImage background={'/news.jpg'}>
+            <Link key={2} href={`/?postId=${2}`} as={`/post/${2}`}>
+              <ProjectImage middle background={'/news.jpg'}>
                 <ProjectTitle>
                   Master Thesis: The News Tips Process at BT
                 </ProjectTitle>
@@ -110,6 +97,23 @@ const Header = () => {
             </Link>
           </ScrollAnimation>
           <ScrollAnimation
+            offset={400}
+            animateIn="animate__fadeIn"
+            animatePreScroll={false}
+            animateOnce={true}
+            duration={2}
+            delay={10}
+          >
+            <Link key={3} href={`/?postId=${3}`} as={`/post/${3}`}>
+              <ProjectImage background={'/construct.jpeg'}>
+                <ProjectTitle>Konstruct: An Outdoor Art Gallery</ProjectTitle>
+              </ProjectImage>
+            </Link>
+          </ScrollAnimation>
+        </ProjectsRow>
+        <ProjectsRow>
+          <ScrollAnimation
+            offset={300}
             animateIn="animate__fadeIn"
             animatePreScroll={false}
             animateOnce={true}
@@ -129,30 +133,18 @@ const Header = () => {
             animatePreScroll={false}
             animateOnce={true}
             duration={2}
-            delay={2}
-          >
-            <Link key={7} href={`/?postId=${7}`} as={`/post/${7}`}>
-              <ProjectImage background={'/commuter.jpg'}>
-                <ProjectTitle>STHML Commuter</ProjectTitle>
-              </ProjectImage>
-            </Link>
-          </ScrollAnimation>
-        </ProjectsColumnMiddle>
-        <ProjectsColumn>
-          <ScrollAnimation
-            animateIn="animate__fadeIn"
-            animatePreScroll={false}
-            animateOnce={true}
-            duration={2}
             delay={10}
           >
-            <Link key={3} href={`/?postId=${3}`} as={`/post/${3}`}>
-              <ProjectImage background={'/construct.jpeg'}>
-                <ProjectTitle>Konstruct: An Outdoor Art Gallery</ProjectTitle>
+            <Link key={5} href={`/?postId=${5}`} as={`/post/${5}`}>
+              <ProjectImage middle background={'/Furhat.png'}>
+                <ProjectTitle>
+                  Teaching A Robot How To Cook: A Study of Embodiment
+                </ProjectTitle>
               </ProjectImage>
             </Link>
           </ScrollAnimation>
           <ScrollAnimation
+            offset={300}
             animateIn="animate__fadeIn"
             animatePreScroll={false}
             animateOnce={true}
@@ -165,7 +157,22 @@ const Header = () => {
               </ProjectImage>
             </Link>
           </ScrollAnimation>
-        </ProjectsColumn>
+        </ProjectsRow>
+        <ProjectsRow>
+          <ScrollAnimation
+            animateIn="animate__fadeIn"
+            animatePreScroll={false}
+            animateOnce={true}
+            duration={2}
+            delay={2}
+          >
+            <Link key={7} href={`/?postId=${7}`} as={`/post/${7}`}>
+              <ProjectImage middle background={'/commuter.jpg'}>
+                <ProjectTitle>STHML Commuter</ProjectTitle>
+              </ProjectImage>
+            </Link>
+          </ScrollAnimation>
+        </ProjectsRow>
       </Projects>
     </Container>
   )
