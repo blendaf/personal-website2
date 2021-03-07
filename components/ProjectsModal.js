@@ -47,7 +47,7 @@ export const Project1 = () => {
       <Back />
       <ProjectWrapper>
         <ProjectInfoWrapper>
-          <ProjectImage src={'/news.jpg'}></ProjectImage>
+          <ProjectImage src={'/medium/news.jpg'}></ProjectImage>
           <ProjectInfo>
             <About>
               <Title> Master Thesis: The News Tips Process at BT</Title>I am
@@ -69,7 +69,7 @@ export const Project2 = () => {
       <Back />
       <ProjectWrapper>
         <ProjectInfoWrapper>
-          <ProjectImage src={'/tv.jpg'}></ProjectImage>
+          <ProjectImage src={'/medium/tv.jpg'}></ProjectImage>
           <ProjectInfo>
             <About>
               <Title>Usability Evaluation of HBO Nordic</Title>
@@ -172,7 +172,7 @@ export const Project6 = () => {
       <Back />
       <ProjectWrapper>
         <ProjectInfoWrapper>
-          <ProjectImage src={'/ewallet.jpg'}></ProjectImage>
+          <ProjectImage src={'/medium/ewallet.jpg'}></ProjectImage>
           <ProjectInfo>
             <About>
               <Title>Usability Of An E-wallet</Title>Designed and usability
@@ -192,7 +192,7 @@ export const Project7 = () => {
       <Back />
       <ProjectWrapper>
         <ProjectInfoWrapper>
-          <ProjectImage src={'/commuter.jpg'}></ProjectImage>
+          <ProjectImage src={'/medium/commuter.jpg'}></ProjectImage>
           <ProjectInfo>
             <About>
               <Title>STHLM Commuter</Title>Further developed an android app, in

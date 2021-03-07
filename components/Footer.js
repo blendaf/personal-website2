@@ -62,7 +62,11 @@ const Footer = () => {
           Nikola Johnny Mirkovic, and{' '}
         </StyledLink>
         <StyledLink href="https://unsplash.com/@pinho">Pinho </StyledLink> on{' '}
-        Unsplash
+        Unsplash. Favicon made by
+        <StyledLink href="https://www.freepik.com">
+          Freepik
+        </StyledLink> from{' '}
+        <StyledLink href="https://www.flaticon.com/">flaticon.com</StyledLink>
       </Photocredit>
     </Wrapper>
   )
