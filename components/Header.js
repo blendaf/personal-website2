@@ -85,7 +85,7 @@ const Header = () => {
       <Navbar />
       <Container>
         <Profile>
-          <ProfileImage></ProfileImage>
+          <ProfileImage />
           <ProfileInfo>
             <Name>Blenda Fröjdh</Name>
             <Positions>
