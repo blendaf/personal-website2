@@ -29,7 +29,7 @@ const ProfileImage = styled.div`
   height: 300px;
   border-radius: 50%;
   margin-right: 25px;
-  background-image: url('/profile.jpg');
+  background-image: url('/profilePicture.jpg');
   background-size: cover;
 `
 
