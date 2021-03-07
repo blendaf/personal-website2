@@ -5,11 +5,9 @@ import screenSizes from '../utils/screen-sizes'
 const NavWrapper = styled.div`
   display: flex;
   width: 40%;
-  margin: 0 auto;
   justify-content: space-evenly;
   cursor: default;
-  margin-top: 50px;
-  margin-bottom: 80px;
+  margin: 50px auto;
 `
 
 const StyledLink = styled.a`

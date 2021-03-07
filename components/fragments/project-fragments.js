@@ -17,6 +17,7 @@ const ContactIcon = styled.a`
   position: absolute;
   top: 5px;
   right: 5px;
+  cursor: pointer;
 `
 
 const StyledIcon = styled.svg`

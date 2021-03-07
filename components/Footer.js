@@ -8,8 +8,7 @@ const Wrapper = styled.div`
   width: 100%;
   justify-content: center;
   cursor: default;
-  margin-bottom: 80px;
-  margin-top: 80px;
+  margin: 50px 0;
 `
 
 const Copyright = styled.p`
@@ -55,6 +54,9 @@ const Footer = () => {
         </StyledLink>
         <StyledLink href="https://unsplash.com/@jonasleupe">
           Jonas Leupe,{' '}
+        </StyledLink>
+        <StyledLink href="https://unsplash.com/@fixelgraphy?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+          Fixelgraphy,{' '}
         </StyledLink>
         <StyledLink href="https://unsplash.com/@hejohnnyme">
           Nikola Johnny Mirkovic, and{' '}

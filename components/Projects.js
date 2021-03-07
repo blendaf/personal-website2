@@ -42,12 +42,12 @@ const ProjectImage = styled.div`
   transform: translateZ(0);
   transition-duration: 0.8s;
   transition-property: transform;
-  box-shadow: 0px 2px 39px 2px ${({ theme }) => theme.colors.hoverBlack};
+  box-shadow: ${({ theme }) => theme.boxShadow.regular};
   backface-visibility: hidden;
 
   &:hover {
     transform: scale(1.1);
-    box-shadow: 0px 2px 39px 10px ${({ theme }) => theme.colors.hoverBlack};
+    box-shadow: ${({ theme }) => theme.boxShadow.intense};
   }
 `
 
@@ -55,6 +55,7 @@ const ProjectTitle = styled.h3`
   color: ${(props) =>
     props.black ? props.theme.colors.black : props.theme.colors.white};
   text-align: center;
+  text-shadow: ${({ theme }) => theme.textShadow.regular};
 `
 
 const Header = () => {
@@ -90,7 +91,7 @@ const Header = () => {
           </Link>
           <Link key={4} href={`/?postId=${4}`} as={`/post/${4}`}>
             <ProjectImage background={'/speak.png'}>
-              <ProjectTitle black>
+              <ProjectTitle>
                 Speak.Exchange: A Bilingual Dictionary
               </ProjectTitle>
             </ProjectImage>

@@ -9,16 +9,6 @@ const theme = {
     black: '#000',
     hoverBlue: 'rgb(137, 151, 153)',
     hoverBlack: 'rgba(40, 45, 46, 0.5 )',
-    // focusBackground: '#EDEDED',
-    // focusLight: '#fafafa',
-    // border: '#CCCCCC',
-    // primary: '#05B8E6',
-    // primaryMuted: '#86C6DE',
-    // primaryInactive: 'rgba(5, 184, 230, 0.5)',
-    // primaryMutedInactive: 'rgba(134, 198, 222, 0.2)',
-    // highlighted: '#c7e5f0',
-    // primaryHighlighted: '#0AA0DE',
-    // selection: '#86C6DE',
     // danger: 'hsl(0, 95%, 40%)',
     // dangerMuted: 'hsl(0, 100%, 95%)',
   },
@@ -28,6 +18,15 @@ const theme = {
   //   },
   transparencies: {
     inactive: '0.5',
+  },
+
+  boxShadow: {
+    regular: '0px 2px 20px 1px rgb(137, 151, 153)',
+    intense: '0px 2px 25px 5px rgb(137, 151, 153)',
+  },
+  textShadow: {
+    regular: '2px 2px 5px rgba(40, 45, 46, 1 )',
+    intense: '0px 2px rgba(0, 0, 0, 0.5 )',
   },
 }
 
