@@ -169,10 +169,36 @@ const Header = () => {
           >
             <Link key={7} href={`/?postId=${7}`} as={`/post/${7}`}>
               <ProjectImage middle background={'/commuter.jpg'}>
+                <ProjectTitle>STHLM Commuter</ProjectTitle>
+              </ProjectImage>
+            </Link>
+          </ScrollAnimation>
+          {/* <ScrollAnimation
+            animateIn="animate__fadeIn"
+            animatePreScroll={false}
+            animateOnce={true}
+            duration={2}
+            delay={2}
+          >
+            <Link key={8} href={`/?postId=${8}`} as={`/post/${8}`}>
+              <ProjectImage middle background={'/commuter.jpg'}>
                 <ProjectTitle>STHML Commuter</ProjectTitle>
               </ProjectImage>
             </Link>
           </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="animate__fadeIn"
+            animatePreScroll={false}
+            animateOnce={true}
+            duration={2}
+            delay={2}
+          >
+            <Link key={9} href={`/?postId=${9}`} as={`/post/${9}`}>
+              <ProjectImage background={'/commuter.jpg'}>
+                <ProjectTitle>STHML Commuter</ProjectTitle>
+              </ProjectImage>
+            </Link>
+          </ScrollAnimation> */}
         </ProjectsRow>
       </Projects>
     </Container>

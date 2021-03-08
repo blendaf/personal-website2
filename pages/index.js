@@ -49,3 +49,4 @@ export default Home
 // 4. Fix mailto
 // 6. Add text to projects
 // 7. Make responsive
+// 8. Add method and tools pills

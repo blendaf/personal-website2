@@ -11,6 +11,8 @@ import {
   Tools,
   About,
   Title,
+  Paragraph,
+  StyledLink,
   Images,
   Image,
   Video,
@@ -52,11 +54,36 @@ export const Project1 = () => {
             <About>
               <Title>Usability Evaluation of HBO Nordic</Title>
               In a group of three, we conducted a comparative usability
-              evaluation of the HBO Nordic website and mobile application. In a
-              between-group and mixed-method study both quantitative and
-              qualitative data was collected and analysed. The main focus of the
-              study was the efficiency and satsifaction of the streaming
-              service.
+              evaluation of the HBO Nordic website and mobile application.
+              <Paragraph>
+                After a critical inspection of the HBO Nordic video streaming
+                service we found that the usability of the service was lacking.
+                Specifically, we hypothesized that the HBO Nordic smartphone
+                applications performed worse than the website.
+              </Paragraph>
+              <Paragraph>
+                We conducted a mixed-methods, comparative usability evaluation
+                of the website and app focusing on effectiveness and
+                satisfaction. Qualitative was collected through observations and
+                open-ended questions. The evaluation was conducted remotely,
+                using a between-group design with 10 participants. The
+                qualitative data was analysed through thematic analysis.
+              </Paragraph>
+              <Paragraph>
+                We found that, overall, the usability of both the website and
+                the app was high but that certain tasks and dimensions scored
+                lower. Therefore, ruining the experience of the service. In line
+                with our hypothesis the application performed worse with regards
+                to both satisfaction and effectiveness. From both the
+                quantitative and qualitative data we could pinpoint four
+                specific changes that would drastically improve the usability of
+                the service, on both website and app.
+              </Paragraph>
+              <Paragraph>
+                Methods &amp; Tools: Comparative Usability Testing, Thematic
+                analysis, Observations, Satisfaction questionnaire, Optimal
+                path, PSSUQ
+              </Paragraph>
             </About>
           </ProjectInfo>
         </ProjectInfoWrapper>
@@ -194,9 +221,36 @@ export const Project7 = () => {
           <ProjectImage src={'/medium/commuter.jpg'}></ProjectImage>
           <ProjectInfo>
             <About>
-              <Title>STHLM Commuter</Title>Further developed an android app, in
-              java, for public transportation in a team. Used scrum as the
-              development method.
+              <Title>STHLM Commuter (STHLM Traveling)</Title>
+              <Paragraph>
+                In a team we further developed an open source Android app. The
+                project was a part of a course in Software Development. The main
+                goal of the course was to apply the agile framework Scrum on a
+                software project.
+              </Paragraph>
+              <Paragraph>
+                We decided to further develop the open source app STHLM
+                Traveling.{' '}
+                <StyledLink href="http://sthlmtraveling.se/">
+                  STHLM Traveling{' '}
+                </StyledLink>
+                is a travel planner application for SL (Public Transportation in
+                Stockholm).
+              </Paragraph>
+              <Paragraph>
+                During the four week long project we added features such as
+                combining multiple journeys, alarm functionality for departure
+                and disembarking, sharing journeys, more parameters to customise
+                journeys as well as refreshing the design of the UI.
+              </Paragraph>
+              <Paragraph>
+                The application was built in Java using Android Studio. Git was
+                used as a version control system and the project is hosted on{' '}
+                <StyledLink href="https://github.com/Team-Eight/sthlm-commuter">
+                  Github
+                </StyledLink>
+                .
+              </Paragraph>
             </About>
           </ProjectInfo>
         </ProjectInfoWrapper>

@@ -49,17 +49,17 @@ export const Back = () => (
 export const ProjectWrapper = styled.div`
   width: 84%;
   margin: 0 auto;
-  padding: 40px 0px;
+  padding: 50px 0px;
 `
 
 export const ProjectInfoWrapper = styled.div`
   display: flex;
-  /* padding-top: 60px; */
+  align-items: start;
 `
 
 export const ProjectImage = styled.img`
   width: 50%;
-  /* background-image: ${(props) => `url(${props.background})`}; */
+
   margin: 0px 20px;
   margin-right: 25px;
 `
@@ -85,6 +85,18 @@ export const About = styled.div``
 export const Title = styled.h2`
   text-align: center;
   color: ${({ theme }) => theme.colors.black};
+  margin-top: -8px;
+`
+
+export const Paragraph = styled.p``
+
+export const StyledLink = styled.a`
+  /* text-decoration: none; */
+  color: ${({ theme }) => theme.colors.black};
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.hoverBlue};
+  }
 `
 
 export const Images = styled.div`
