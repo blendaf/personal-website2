@@ -61,6 +61,7 @@ const ProjectTitle = styled.h3`
     props.black ? props.theme.colors.black : props.theme.colors.white};
   text-align: center;
   text-shadow: ${({ theme }) => theme.textShadow.regular};
+  padding: 0px 2px;
 `
 
 const Header = () => {
@@ -107,7 +108,9 @@ const Header = () => {
           >
             <Link key={3} href={`/?postId=${3}`} as={`/post/${3}`}>
               <ProjectImage background={'/construct.jpeg'}>
-                <ProjectTitle>Konstruct: An Outdoor Art Gallery</ProjectTitle>
+                <ProjectTitle>
+                  Konstruct: AR city-wide outdoor gallery app
+                </ProjectTitle>
               </ProjectImage>
             </Link>
           </ScrollAnimation>

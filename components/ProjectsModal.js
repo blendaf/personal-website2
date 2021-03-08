@@ -132,10 +132,48 @@ export const Project3 = () => {
 
           <ProjectInfo>
             <About>
-              <Title>Konstruct: An Outdoor Art Gallery</Title>In a project group
-              of four we studied and critiqued a number of interaction design
-              methodologies. We then applied these methodologies to the
-              different stages of our design process to create a concept design.
+              <Title>Konstruct: AR city-wide outdoor gallery app</Title>
+
+              <Paragraph>
+                In a project group of four we studied and critiqued a number of
+                interaction design methodologies. We then applied these
+                methodologies to the different stages of our design process to
+                create a concept design.
+              </Paragraph>
+
+              <Paragraph>
+                As a design team, we were given the assignment to focus on
+                creating a solution around the issue of “Weaving the Threads
+                within the Social Fabric,”. We started by following the double
+                diamond model to direct our design process before observing
+                existing communities that surrounded us; specifically, ones that
+                we felt lacked connection. Through bodystorming, we refined this
+                design problem and realised that art was an important yet
+                underutilised social connectivity tool. Specifically, we found
+                that while there were multiple free art galleries throughout
+                Stockholm City they were hidden away and unapproachable.
+              </Paragraph>
+              <Paragraph>
+                Through ethnographic observations, semi-structured interviews
+                with art students, and affinity diagramming, we could define the
+                primary and secondary personas that we would be designing for.
+                We then used an adapted version of 6-3-5 brainwriting together
+                with interface sketching to individually and collaboratively
+                come up with a variety of solutions. We then consolidated our
+                ideas into a conceptual model. Based on our conceptual model we
+                created an interactive prototype in Figma that was then used in
+                a video prototype. The Finally, to evaluate our design and
+                concept, we conducted a focus group evaluation on our
+                interactive prototype with art students from The Swedish Royal
+                Institute of Art.
+              </Paragraph>
+
+              <Paragraph>
+                Method &amp; Tools: Ethnographic observation, Semi-structured
+                interviews, Bodystorming, Personas, Scenarios, Affinity diagram,
+                6-3-5 brainwriting, Interface sketching, Interactive
+                prototyping, Figma, Video prototyping, Focus group
+              </Paragraph>
             </About>
           </ProjectInfo>
         </ProjectInfoWrapper>
@@ -179,11 +217,41 @@ export const Project5 = () => {
           <ProjectInfo>
             <About>
               <Title>Teaching A Robot How To Cook: A Study of Embodiment</Title>
-              Evaluated the effects of robot embodiment on grounding in HRI.
-              Implemented two versions of a robot interface that would receive
-              cooking instructions from users using the Furhat SDK. A user study
-              was then performed to explore how the two versions were perceived
-              by test participants.
+              In a group of four we evaluated the effects of robot embodiment on
+              grounding in HRI. We implemented two versions of a visual robot
+              interface that would receive cooking instructions from users using
+              the Furhat SDK. A user study was then performed to explore how the
+              two versions were perceived by test participants.
+              <Paragraph>
+                We attempted to explore how combinations of modalities, more
+                specifically speech and facial gestures, affect the perception
+                of common ground in Human-Robot interaction (HRI). We tried to
+                answer the question: Does multimodal implementations of robot
+                interfaces improve the perception of common ground in
+                Human-Robot communication compared to unimodal implementations?
+                The hypothesis was that the multimodal robot interaction would
+                increase the perception of common ground compared to the
+                unimodal robot interaction.
+              </Paragraph>
+              <Paragraph>
+                We tried to answer the research questions through a
+                mixed-methods study design where five participants were asked to
+                remotely teach a virtual robot how to cook a specific recipe
+                under two conditions and then evaluate their experiences though
+                several questionnaires. The two implementations of the Robot was
+                developed using the Furhat SDK in Kotlin.
+              </Paragraph>
+              <Paragraph>
+                The results indicated that a multimodal representations of a
+                robotic interface might positively increase the perceived common
+                ground of users in relation to a unimodal representation
+                However, the results were inconclusive so no clear conclusion
+                could be drawn. Overall, the results showed that test
+                participants perceived that the multimodal representation of the
+                robot had a number of advantages such as increased naturalness,
+                easier turn-taking and a more human-human-like interaction, when
+                compared to the unimodal representation.
+              </Paragraph>
             </About>
           </ProjectInfo>
         </ProjectInfoWrapper>
