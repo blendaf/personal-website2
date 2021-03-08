@@ -169,7 +169,7 @@ export const Project3 = () => {
               </Paragraph>
 
               <Paragraph>
-                Method &amp; Tools: Ethnographic observation, Semi-structured
+                Methods &amp; Tools: Ethnographic observation, Semi-structured
                 interviews, Bodystorming, Personas, Scenarios, Affinity diagram,
                 6-3-5 brainwriting, Interface sketching, Interactive
                 prototyping, Figma, Video prototyping, Focus group
@@ -196,12 +196,48 @@ export const Project4 = () => {
             <About>
               <Title>Speak.Exchange: A Bilingual Dictionary</Title>In a group of
               four we developed speak.exchange which is an online bilingual
-              dictionary, that offers a spaced-repetition system(SRS)
-              forlearning new words in a foreign language. Found at
+              dictionary, that offers a spaced-repetition system(SRS) for
+              learning new words in a foreign language. We received the course
+              award for Best UX Design out of 800 students. Found at
               speak.exchange.
+              <Paragraph>
+                In an interaction programming course we were tasked with
+                building a web application using React. The application had to
+                persist data, use a front-end framework, have several views of
+                the same data and have interaction on the data. The design and
+                usability of the web application was also an important factor.
+                After an individual and collaborative brainstorming session we
+                decided to create an app that is based on the online dictionary.
+              </Paragraph>
+              <Paragraph>
+                After we decided on the concept of a bilingual (French and
+                English) online dictionary that also supports a user saving
+                decks with words we created a prototype usign Adobe XD. We then
+                conducted a usability evaluation of the prototype and changed it
+                accordingly. We developed the website using React for our
+                front-end framework, Node.js for our runtime environment,
+                Next.js for server-side rendering, Firebase for data
+                persistance, Firebase Authentication for user authentication,
+                styled-components for CSS and wordreference-api for dictionary
+                data from WordReference. Mid-development we conducted another
+                usability evaluation, this time with a bilingual speaker of
+                French and English, and fixed the found problems.
+              </Paragraph>
+              <Paragraph>
+                Methods &amp; Tools: React, Next.js, Node.js, styled-components,
+                Firebase, Firebase authentication, Wordreference API, Usability
+                Evaluation, Github, Adobe XD
+              </Paragraph>
             </About>
           </ProjectInfo>
         </ProjectInfoWrapper>
+        <Images>
+          <Image border src={'/Repeat.png'} />
+          <Image border src={'/Review-Deck.png'} />
+          <Image border src={'/Review-Deck2.png'} />
+          <Image border src={'/Search.png'} />
+          <Image border src={'/See-Deck.png'} />
+        </Images>
       </ProjectWrapper>
     </Container>
   )

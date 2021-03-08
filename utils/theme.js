@@ -24,6 +24,7 @@ const theme = {
   boxShadow: {
     regular: '0px 2px 20px 1px rgb(137, 151, 153)',
     intense: '0px 2px 25px 5px rgb(137, 151, 153)',
+    light: '0px 2px 20px 1px rgba(137, 151, 153, 0.5)',
   },
   textShadow: {
     regular: '2px 2px 5px rgba(40, 45, 46, 1 )',

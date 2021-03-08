@@ -91,7 +91,6 @@ export const Title = styled.h2`
 export const Paragraph = styled.p``
 
 export const StyledLink = styled.a`
-  /* text-decoration: none; */
   color: ${({ theme }) => theme.colors.black};
 
   &:hover {
@@ -109,4 +108,8 @@ export const Images = styled.div`
 export const Image = styled.img`
   border-radius: 20px;
   width: 100%;
+  border: ${(props) => (props.border ? 'solid 1px lightgray ' : 'none')};
+  /* border-radius: ${(props) => (props.border ? '0px ' : '20px')}; */
+  /* box-shadow: ${({ theme }) => theme.boxShadow.light}; */
+  margin: 10px 0px;
 `
