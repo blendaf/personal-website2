@@ -156,7 +156,7 @@ const Experience = () => (
         animateIn="animate__fadeIn"
         animateOnce={true}
         duration={2}
-        delay={1000}
+        delay={800}
       >
         <ExperienceWrapper>
           <Title>Work Experience</Title>

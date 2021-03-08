@@ -47,7 +47,5 @@ export default Home
 // TODO
 // 2. Add text to experience and education
 // 4. Fix mailto
-// 5. Fix active link/page in navbar
 // 6. Add text to projects
 // 7. Make responsive
-// 8. Change columns to rows in projects
