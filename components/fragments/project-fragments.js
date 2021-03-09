@@ -59,8 +59,6 @@ export const ProjectInfoWrapper = styled.div`
 
 export const ProjectImage = styled.img`
   width: 50%;
-
-  margin: 0px 20px;
   margin-right: 25px;
 `
 
@@ -86,6 +84,7 @@ export const Title = styled.h2`
   text-align: center;
   color: ${({ theme }) => theme.colors.black};
   margin-top: -8px;
+  margin-top: ${(props) => (props.margin ? '40px ' : '-8px;')};
 `
 
 export const Paragraph = styled.p``
@@ -99,17 +98,18 @@ export const StyledLink = styled.a`
 `
 
 export const Images = styled.div`
-  margin-top: 50px;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
 `
 
 export const Image = styled.img`
+  width: 20%;
+  display: flex;
+  flex: 1 100px;
   border-radius: 20px;
-  width: 100%;
   border: ${(props) => (props.border ? 'solid 1px lightgray ' : 'none')};
   /* border-radius: ${(props) => (props.border ? '0px ' : '20px')}; */
   /* box-shadow: ${({ theme }) => theme.boxShadow.light}; */
-  margin: 10px 0px;
+  margin: 10px;
 `

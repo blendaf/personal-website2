@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import styled from 'styled-components'
 import { LinkedinWithCircle } from '@styled-icons/entypo-social'
+import { Pills } from './fragments/pills'
 import {
   Container,
   Back,
@@ -53,8 +54,23 @@ export const Project1 = () => {
           <ProjectInfo>
             <About>
               <Title>Usability Evaluation of HBO Nordic</Title>
-              In a group of three, we conducted a comparative usability
-              evaluation of the HBO Nordic website and mobile application.
+              <Paragraph>
+                In a group of three, we conducted a comparative usability
+                evaluation of the HBO Nordic website and mobile application.
+              </Paragraph>
+
+              <Pills
+                skills={[
+                  'Comparative usability testing',
+                  'Thematic analysis',
+                  'Observations',
+                  'Satisfaction questionnaire',
+                  'Optimal path',
+                  'PSSUQ',
+                ]}
+              />
+
+              {/* <Title margin>More about the project</Title> */}
               <Paragraph>
                 After a critical inspection of the HBO Nordic video streaming
                 service we found that the usability of the service was lacking.
@@ -79,11 +95,6 @@ export const Project1 = () => {
                 specific changes that would drastically improve the usability of
                 the service, on both website and app.
               </Paragraph>
-              <Paragraph>
-                Methods &amp; Tools: Comparative Usability Testing, Thematic
-                analysis, Observations, Satisfaction questionnaire, Optimal
-                path, PSSUQ
-              </Paragraph>
             </About>
           </ProjectInfo>
         </ProjectInfoWrapper>
@@ -106,6 +117,14 @@ export const Project2 = () => {
               Tidende with news tip and improving the design of the digital news
               tip function.
             </About>
+
+            <Pills
+              skills={[
+                'Semi-structured interviews',
+                'Usability testing',
+                'Thematic analysis',
+              ]}
+            />
           </ProjectInfo>
         </ProjectInfoWrapper>
       </ProjectWrapper>
@@ -140,6 +159,22 @@ export const Project3 = () => {
                 methodologies to the different stages of our design process to
                 create a concept design.
               </Paragraph>
+              <Pills
+                skills={[
+                  'Ethnographic observation',
+                  'Semi-structured interviews',
+                  'Bodystorming',
+                  'Personas',
+                  'Scenarios',
+                  'Affinity diagram',
+                  '6-3-5 brainwriting',
+                  'Interface sketching',
+                  'Interactive prototyping',
+                  'Figma',
+                  'Video prototyping',
+                  'Focus group',
+                ]}
+              />
 
               <Paragraph>
                 As a design team, we were given the assignment to focus on
@@ -167,13 +202,6 @@ export const Project3 = () => {
                 interactive prototype with art students from The Swedish Royal
                 Institute of Art.
               </Paragraph>
-
-              <Paragraph>
-                Methods &amp; Tools: Ethnographic observation, Semi-structured
-                interviews, Bodystorming, Personas, Scenarios, Affinity diagram,
-                6-3-5 brainwriting, Interface sketching, Interactive
-                prototyping, Figma, Video prototyping, Focus group
-              </Paragraph>
             </About>
           </ProjectInfo>
         </ProjectInfoWrapper>
@@ -194,12 +222,28 @@ export const Project4 = () => {
           <ProjectImage src={'/speak.png'}></ProjectImage>
           <ProjectInfo>
             <About>
-              <Title>Speak.Exchange: A Bilingual Dictionary</Title>In a group of
-              four we developed speak.exchange which is an online bilingual
-              dictionary, that offers a spaced-repetition system(SRS) for
-              learning new words in a foreign language. We received the course
-              award for Best UX Design out of 800 students. Found at
-              speak.exchange.
+              <Title>Speak.Exchange: A Bilingual Dictionary</Title>
+              <Paragraph>
+                In a group of four we developed speak.exchange which is an
+                online bilingual dictionary, that offers a spaced-repetition
+                system(SRS) for learning new words in a foreign language. We
+                received the course award for Best UX Design out of 800
+                students. Found at speak.exchange.
+              </Paragraph>
+
+              <Pills
+                skills={[
+                  'React ',
+                  'Next.js',
+                  'Node.js',
+                  'styled-components',
+                  'Firebase',
+                  'Wordreference API',
+                  'Usability Evaluation',
+                  'Github',
+                  'Adobe XD',
+                ]}
+              />
               <Paragraph>
                 In an interaction programming course we were tasked with
                 building a web application using React. The application had to
@@ -234,8 +278,12 @@ export const Project4 = () => {
         <Images>
           <Image border src={'/Repeat.png'} />
           <Image border src={'/Review-Deck.png'} />
+        </Images>
+        <Images>
           <Image border src={'/Review-Deck2.png'} />
           <Image border src={'/Search.png'} />
+        </Images>
+        <Images>
           <Image border src={'/See-Deck.png'} />
         </Images>
       </ProjectWrapper>
@@ -253,11 +301,15 @@ export const Project5 = () => {
           <ProjectInfo>
             <About>
               <Title>Teaching A Robot How To Cook: A Study of Embodiment</Title>
-              In a group of four we evaluated the effects of robot embodiment on
-              grounding in HRI. We implemented two versions of a visual robot
-              interface that would receive cooking instructions from users using
-              the Furhat SDK. A user study was then performed to explore how the
-              two versions were perceived by test participants.
+              <Paragraph>
+                In a group of four we evaluated the effects of robot embodiment
+                on grounding in HRI. We implemented two versions of a visual
+                robot interface that would receive cooking instructions from
+                users using the Furhat SDK. A user study was then performed to
+                explore how the two versions were perceived by test
+                participants.
+              </Paragraph>
+              <Pills skills={['Kotlin', 'Furhat SDK', 'User Study']} />
               <Paragraph>
                 We attempted to explore how combinations of modalities, more
                 specifically speech and facial gestures, affect the perception
@@ -305,9 +357,38 @@ export const Project6 = () => {
           <ProjectImage src={'/medium/ewallet.jpg'}></ProjectImage>
           <ProjectInfo>
             <About>
-              <Title>Usability Of An E-wallet</Title>Designed and usability
-              tested a crypto currency mobile payment applications as my
-              bachelor thesis.
+              <Title>Usability Of An E-wallet</Title>
+              <Paragraph>
+                Designed and usability tested a crypto currency mobile payment
+                applications as my bachelor thesis togheter with Bercis Arslan.
+              </Paragraph>
+              <Pills skills={['Formative usability testing ']} />
+              <Paragraph>
+                Centiglobe is a trading company that wanted to develop a mobile
+                payment app (specifically an e-wallet), which enables payment
+                with cryptocurrency as well as international payments. Since the
+                functionality of the app was fairly new the company wanted
+                ensure that the app had a design with high usability.
+              </Paragraph>
+              <Paragraph>
+                We investiget how an e-wallet can be designed to provide a high
+                level of usability by conforming to best HCI practices and by
+                formative usability evaluation. The research process consisted
+                of an initial literature study and development of a prototype in
+                Figma, which was evaluated iteratively through
+                Thinking-aloud-protocol (TAP) and a combination of performance
+                measurements and questionnaire by a chosen test group.
+              </Paragraph>
+              <Paragraph>
+                Based on our evaluations we could conclude that the test
+                subjects had more trouble understanding the concept of the
+                e-wallet rather than navigating and completing tasks. The
+                difficulties lay in understanding how currencies were stored and
+                how transactions happened. When developing this e-wallet we
+                noticed that the most important issue was to make new functions
+                and concepts familiar to the user through relating it to
+                recognizable ideas.
+              </Paragraph>
             </About>
           </ProjectInfo>
         </ProjectInfoWrapper>
@@ -328,9 +409,13 @@ export const Project7 = () => {
               <Title>STHLM Commuter (STHLM Traveling)</Title>
               <Paragraph>
                 In a team we further developed an open source Android app. The
-                project was a part of a course in Software Development. The main
-                goal of the course was to apply the agile framework Scrum on a
-                software project.
+                project was a part of a course in Software Development.
+              </Paragraph>
+
+              <Pills skills={['Scrum', 'Android Studio']} />
+              <Paragraph>
+                The main goal of the course was to apply the agile framework
+                Scrum on a software project.
               </Paragraph>
               <Paragraph>
                 We decided to further develop the open source app STHLM

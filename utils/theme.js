@@ -30,6 +30,10 @@ const theme = {
     regular: '2px 2px 5px rgba(40, 45, 46, 1 )',
     intense: '0px 2px rgba(0, 0, 0, 0.5 )',
   },
+  fontSize: {
+    breadNormal: '20px',
+    signsNormal: '12px',
+  },
 }
 
 // export { fontNames }
