@@ -14,6 +14,7 @@ const Wrapper = styled.div`
   }
 
   @media screen and (max-width: ${screenSizes.phone.max}) {
+    margin: 20px 0;
   }
 `
 

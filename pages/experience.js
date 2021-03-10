@@ -4,11 +4,19 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import 'animate.css/animate.min.css'
 import ScrollAnimation from 'react-animate-on-scroll'
+import screenSizes from '../utils/screen-sizes'
 
 const Container = styled.div`
   width: 80%;
   margin: 0 auto;
   color: ${({ theme }) => theme.colors.black};
+
+  @media screen and (max-width: ${screenSizes.tablet.max}) {
+  }
+
+  @media screen and (max-width: ${screenSizes.phone.max}) {
+    widht: 100%;
+  }
 `
 const Title = styled.h2`
   color: ${({ theme }) => theme.colors.primary};
@@ -78,6 +86,13 @@ const VolunteerProjectsWrapper = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 50px;
+
+  @media screen and (max-width: ${screenSizes.tablet.max}) {
+  }
+
+  @media screen and (max-width: ${screenSizes.phone.max}) {
+    flex-wrap: wrap;
+  }
 `
 
 const VolunteerProject = styled.div`
@@ -86,6 +101,13 @@ const VolunteerProject = styled.div`
   flex-direction: column;
   align-items: center;
   flex: 1 1 50%;
+
+  @media screen and (max-width: ${screenSizes.tablet.max}) {
+  }
+
+  @media screen and (max-width: ${screenSizes.phone.max}) {
+    margin: 20px 30px;
+  }
 `
 
 const VolunteerImage = styled.a`
@@ -112,6 +134,14 @@ const VolunteerImage = styled.a`
     transform: scale(1.1);
     box-shadow: ${({ theme }) => theme.boxShadow.intense};
   }
+
+  @media screen and (max-width: ${screenSizes.tablet.max}) {
+  }
+
+  @media screen and (max-width: ${screenSizes.phone.max}) {
+    width: 200px;
+    height: 200px;
+  }
 `
 const VolunteerTitle = styled.h3`
   color: ${(props) =>
@@ -122,6 +152,12 @@ const VolunteerTitle = styled.h3`
 
 const VolunteerInfo = styled.div`
   margin-top: 10px;
+
+  @media screen and (max-width: ${screenSizes.tablet.max}) {
+  }
+
+  @media screen and (max-width: ${screenSizes.phone.max}) {
+  }
 `
 
 const Experience = () => (
