@@ -14,12 +14,39 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Quicksand', sans-serif;
     font-weight: 400;
-    
+    @media screen and (max-width: 1007px) {
+
+}
+
+@media screen and (max-width: 640px) {
+  font-size: 15px;
+}
   }
 
   h1,h2,h3 {
     font-family: 'Open Sans', sans-serif;
 
+   
+  }
+  h1 {
+    @media screen and (max-width: 1007px) {
+
+}
+
+@media screen and (max-width: 640px) {
+  font-size: 20px;
+  }
+  }
+
+  p {
+    @media screen and (max-width: 1007px) {
+
+}
+
+@media screen and (max-width: 640px) {
+  font-size: 12px;
+  }
+    
   }
 `
 

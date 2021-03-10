@@ -10,6 +10,12 @@ const NavWrapper = styled.div`
   cursor: default;
   margin: 50px auto;
   color: ${({ theme }) => theme.colors.black};
+  @media screen and (max-width: ${screenSizes.tablet.max}) {
+  }
+
+  @media screen and (max-width: ${screenSizes.phone.max}) {
+    width: 80%;
+  }
 `
 
 const StyledLink = styled.a`

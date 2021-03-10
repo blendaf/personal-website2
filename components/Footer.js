@@ -9,6 +9,12 @@ const Wrapper = styled.div`
   cursor: default;
   margin: 50px 0;
   color: ${({ theme }) => theme.colors.black};
+
+  @media screen and (max-width: ${screenSizes.tablet.max}) {
+  }
+
+  @media screen and (max-width: ${screenSizes.phone.max}) {
+  }
 `
 
 const Copyright = styled.p`
@@ -19,6 +25,14 @@ const Photocredit = styled.div`
   display: flex;
   justify-content: center;
   font-size: 10px;
+
+  @media screen and (max-width: ${screenSizes.tablet.max}) {
+    flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: ${screenSizes.phone.max}) {
+    font-size: 8px;
+  }
 `
 
 const StyledLink = styled.a`

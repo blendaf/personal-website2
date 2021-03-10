@@ -11,9 +11,11 @@ const Container = styled.div`
   color: ${({ theme }) => theme.colors.black};
 
   @media screen and (max-width: ${screenSizes.tablet.max}) {
+    width: 85%;
   }
 
   @media screen and (max-width: ${screenSizes.phone.max}) {
+    width: 100%;
   }
 `
 
@@ -22,6 +24,14 @@ const Profile = styled.div`
   flex-direction: row;
   width: 100%;
   justify-content: center;
+
+  @media screen and (max-width: ${screenSizes.tablet.max}) {
+  }
+
+  @media screen and (max-width: ${screenSizes.phone.max}) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 const ProfileImage = styled.div`
@@ -32,6 +42,18 @@ const ProfileImage = styled.div`
   margin-right: 25px;
   background-image: url('/profilePicture.jpg');
   background-size: cover;
+  @media screen and (max-width: ${screenSizes.tablet.max}) {
+    width: 200px;
+    height: 200px;
+    margin-right: 10px;
+  }
+
+  @media screen and (max-width: ${screenSizes.phone.max}) {
+    width: 150px;
+    height: 150px;
+    margin: 0;
+    margin-bottom: 10px;
+  }
 `
 
 const ProfileInfo = styled.div`
@@ -39,6 +61,17 @@ const ProfileInfo = styled.div`
   margin-left: 25px;
   flex-direction: column;
   justify-content: center;
+
+  @media screen and (max-width: ${screenSizes.tablet.max}) {
+    margin-left: 10px;
+    width: 50%;
+  }
+
+  @media screen and (max-width: ${screenSizes.phone.max}) {
+    margin: 0;
+    text-align: center;
+    width: 80%;
+  }
 `
 
 const Name = styled.h1`
@@ -53,6 +86,15 @@ const Positions = styled.div`
 const Contact = styled.div`
   display: flex;
   width: 100%;
+
+  @media screen and (max-width: ${screenSizes.tablet.max}) {
+    width: auto;
+  }
+
+  @media screen and (max-width: ${screenSizes.phone.max}) {
+    justify-content: center;
+    margin-top: 10px;
+  }
 `
 
 const ContactIcon = styled.a`
@@ -69,6 +111,13 @@ const ContactIcon = styled.a`
   &:active > * {
     color: ${({ theme }) => theme.colors.activeBlue};
   }
+
+  @media screen and (max-width: ${screenSizes.tablet.max}) {
+  }
+
+  @media screen and (max-width: ${screenSizes.phone.max}) {
+    margin: 0 5px;
+  }
 `
 
 const StyledIcon = styled.svg`
@@ -81,6 +130,13 @@ const StyledIcon = styled.svg`
   display: inline-block;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   backface-visibility: hidden;
+
+  @media screen and (max-width: ${screenSizes.tablet.max}) {
+  }
+
+  @media screen and (max-width: ${screenSizes.phone.max}) {
+    width: 30px;
+  }
 `
 
 const Header = () => {
