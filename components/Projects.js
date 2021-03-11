@@ -14,6 +14,7 @@ const Container = styled.div`
   }
 
   @media screen and (max-width: ${screenSizes.phone.max}) {
+    width: 100%;
   }
 `
 
@@ -27,6 +28,15 @@ const Projects = styled.div`
 
 const ProjectsRow = styled.div`
   display: flex;
+
+  @media screen and (max-width: ${screenSizes.tablet.max}) {
+  }
+
+  @media screen and (max-width: ${screenSizes.phone.max}) {
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+  }
 `
 
 const ProjectImage = styled.div`
@@ -53,6 +63,20 @@ const ProjectImage = styled.div`
     transform: ${(props) =>
       props.middle ? 'scale(1.1)' : 'translateY(200px) scale(1.1)'};
     box-shadow: ${({ theme }) => theme.boxShadow.intense};
+  }
+
+  @media screen and (max-width: ${screenSizes.tablet.max}) {
+    transform: none;
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+  }
+
+  @media screen and (max-width: ${screenSizes.phone.max}) {
+    transform: none;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
   }
 `
 

@@ -29,6 +29,13 @@ const EducationWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   margin: 80px 0px;
+  text-align: center;
+  @media screen and (max-width: ${screenSizes.tablet.max}) {
+  }
+
+  @media screen and (max-width: ${screenSizes.phone.max}) {
+    margin: 40px 0px;
+  }
 `
 
 const EducationTitle = styled.h3`
@@ -61,6 +68,12 @@ const ExperienceWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   margin: 80px 0px;
+  @media screen and (max-width: ${screenSizes.tablet.max}) {
+  }
+
+  @media screen and (max-width: ${screenSizes.phone.max}) {
+    margin: 40px 0px;
+  }
 `
 
 const ExperienceTitle = styled.h3`
@@ -80,6 +93,12 @@ const ExperienceLine = styled.div`
 
 const VolunteerWrapper = styled.div`
   margin: 80px 0px;
+  @media screen and (max-width: ${screenSizes.tablet.max}) {
+  }
+
+  @media screen and (max-width: ${screenSizes.phone.max}) {
+    margin: 40px 0px;
+  }
 `
 
 const VolunteerProjectsWrapper = styled.div`
@@ -92,6 +111,7 @@ const VolunteerProjectsWrapper = styled.div`
 
   @media screen and (max-width: ${screenSizes.phone.max}) {
     flex-wrap: wrap;
+    margin-top: 20px;
   }
 `
 

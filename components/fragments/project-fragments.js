@@ -1,12 +1,14 @@
 import Link from 'next/link'
 import styled from 'styled-components'
 import { Cross } from '@styled-icons/entypo/Cross'
+import screenSizes from '../../utils/screen-sizes'
 
 export const Container = styled.div`
-  display: flex;
   min-height: 100%;
-  align-items: center;
   color: ${({ theme }) => theme.colors.black};
+  width: 84%;
+  margin: 0 auto;
+  /* padding: 50px 0px; */
 `
 
 const ContactIcon = styled.a`
@@ -36,6 +38,13 @@ const StyledIcon = styled.svg`
     color: ${({ theme }) => theme.colors.hoverBlue};
     transform: scale(1.1);
   }
+
+  @media screen and (max-width: ${screenSizes.tablet.max}) {
+  }
+
+  @media screen and (max-width: ${screenSizes.phone.max}) {
+    width: 30px;
+  }
 `
 
 export const Back = () => (
@@ -47,38 +56,70 @@ export const Back = () => (
 )
 
 export const ProjectWrapper = styled.div`
-  width: 84%;
-  margin: 0 auto;
-  padding: 50px 0px;
-`
-
-export const ProjectInfoWrapper = styled.div`
   display: flex;
   align-items: start;
+  flex-direction: column;
+
+  @media screen and (max-width: ${screenSizes.tablet.max}) {
+  }
+
+  @media screen and (max-width: ${screenSizes.phone.max}) {
+    flex-direction: column;
+    align-items: center;
+  }
+`
+export const ProjectInfo = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 50px;
+
+  @media screen and (max-width: ${screenSizes.tablet.max}) {
+  }
+
+  @media screen and (max-width: ${screenSizes.phone.max}) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 export const ProjectImage = styled.img`
   width: 50%;
   margin-right: 25px;
+  @media screen and (max-width: ${screenSizes.tablet.max}) {
+  }
+
+  @media screen and (max-width: ${screenSizes.phone.max}) {
+    margin: 0;
+    width: 80%;
+  }
 `
 
 export const Video = styled.div`
   width: 50%;
   border-radius: 20px;
   margin-right: 25px;
+  @media screen and (max-width: ${screenSizes.tablet.max}) {
+  }
+
+  @media screen and (max-width: ${screenSizes.phone.max}) {
+    margin: 0;
+    width: 100%;
+  }
 `
-export const ProjectInfo = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
+export const About = styled.div`
   width: 50%;
   margin-left: 25px;
+  @media screen and (max-width: ${screenSizes.tablet.max}) {
+  }
+
+  @media screen and (max-width: ${screenSizes.phone.max}) {
+    margin: 0;
+    width: 100%;
+    margin-top: 20px;
+  }
 `
-
-export const Tools = styled.div``
-
-export const About = styled.div``
 
 export const Title = styled.h2`
   text-align: center;
@@ -87,7 +128,14 @@ export const Title = styled.h2`
   margin-top: ${(props) => (props.margin ? '40px ' : '-8px;')};
 `
 
-export const Paragraph = styled.p``
+export const Paragraph = styled.p`
+  @media screen and (max-width: ${screenSizes.tablet.max}) {
+  }
+
+  @media screen and (max-width: ${screenSizes.phone.max}) {
+    width: 100%;
+  }
+`
 
 export const StyledLink = styled.a`
   color: ${({ theme }) => theme.colors.black};
@@ -101,6 +149,14 @@ export const Images = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: ${screenSizes.tablet.max}) {
+  }
+
+  @media screen and (max-width: ${screenSizes.phone.max}) {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 `
 
 export const Image = styled.img`
@@ -112,4 +168,14 @@ export const Image = styled.img`
   /* border-radius: ${(props) => (props.border ? '0px ' : '20px')}; */
   /* box-shadow: ${({ theme }) => theme.boxShadow.light}; */
   margin: 10px;
+
+  @media screen and (max-width: ${screenSizes.tablet.max}) {
+  }
+
+  @media screen and (max-width: ${screenSizes.phone.max}) {
+    width: 100%;
+    flex: 1 0 auto;
+    margin: 0;
+    margin-top: 10px;
+  }
 `

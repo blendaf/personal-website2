@@ -23,12 +23,9 @@ const GlobalStyle = createGlobalStyle`
 }
   }
 
-  h1,h2,h3 {
-    font-family: 'Open Sans', sans-serif;
-
-   
-  }
+  
   h1 {
+    font-family: 'Open Sans', sans-serif;
     @media screen and (max-width: 1007px) {
 
 }
@@ -37,7 +34,26 @@ const GlobalStyle = createGlobalStyle`
   font-size: 20px;
   }
   }
+  h2 {
+    font-family: 'Open Sans', sans-serif;
+    @media screen and (max-width: 1007px) {
 
+}
+
+@media screen and (max-width: 640px) {
+  font-size: 20px;
+  }
+  }
+  h3 {
+    font-family: 'Open Sans', sans-serif;
+    @media screen and (max-width: 1007px) {
+
+}
+
+@media screen and (max-width: 640px) {
+  font-size: 15px;
+  }
+  }
   p {
     @media screen and (max-width: 1007px) {
 
@@ -48,6 +64,23 @@ const GlobalStyle = createGlobalStyle`
   }
     
   }
+
+
+  /* .modal-style {
+    background-color: white;
+    border-radius: 4px;
+    padding: 0px;
+    top: 60px;
+    left: 100px;
+    right: 100px;
+    width: 80%;
+    bottom: 60px;
+    border: 1px solid rgba(255, 255, 255, 0.8); 
+}
+
+.overlay-style{
+  background-color: red;
+} */
 `
 
 export default function App({ Component, pageProps }) {

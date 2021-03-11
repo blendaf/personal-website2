@@ -19,6 +19,8 @@ const Home = () => {
         isOpen={!!router.query.postId}
         onRequestClose={() => router.push('/')}
         contentLabel="Post modal"
+        // className="modal-style"
+        // overlayClassName="overlay-style"
         style={{
           overlay: {
             backgroundColor: 'rgba(193, 198, 199, 0.8)',
@@ -27,8 +29,8 @@ const Home = () => {
             borderRadius: '4px',
             padding: '0px',
             top: '60px',
-            left: '100px',
-            right: '100px',
+            left: '50px',
+            right: '50px',
             bottom: '60px',
             border: '1px solid rgba(193, 198, 199, 0.8)',
           },

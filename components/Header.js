@@ -35,7 +35,7 @@ const Profile = styled.div`
 `
 
 const ProfileImage = styled.div`
-  background-color: blue;
+  background-color: ${({ theme }) => theme.colors.hoverBlue};
   width: 300px;
   height: 300px;
   border-radius: 50%;
