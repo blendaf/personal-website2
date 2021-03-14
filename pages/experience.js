@@ -342,7 +342,11 @@ const Experience = () => (
                 Volunteered at IxDA's Interaction Week 2020 in Milan, Italy.
                 IxDA's Interaction Week is one of the largest events dedicated
                 to interaction design featuring speakers presenting the latest
-                and future visions in the industry.
+                and future visions in the industry. As a sponsor liaison, I was
+                responsible for the sponsor booths and making sure that any
+                problems were resolved. Luckily I was also able to attend
+                several talks and workshops on everything from data privacy to
+                inclusive design.
               </VolunteerInfo>
             </VolunteerProject>
           </VolunteerProjectsWrapper>
@@ -362,8 +366,9 @@ const Experience = () => (
                 <VolunteerTitle>Spotify Mentorship Program</VolunteerTitle>
               </VolunteerImage>
               <VolunteerInfo>
-                In the program I attented workshops and had weekly mentorship
-                meetings
+                In the program, I attended workshops lectures, and had weekly
+                mentorship meetings with an Engineering Manager. During the
+                meetings, I worked mainly on my leadership and teamwork skills
               </VolunteerInfo>
             </VolunteerProject>
             <VolunteerProject>
