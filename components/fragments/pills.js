@@ -8,13 +8,12 @@ const PillList = styled.ul`
 `
 
 const Pill = styled.li`
-  padding: 5px 8px;
+  padding: 5px 10px;
   background-color: ${({ theme }) => theme.colors.hoverBlue};
   color: ${({ theme }) => theme.colors.white};
   font-size: ${({ theme }) => theme.fontSize.signsNormal};
   font-weight: 700;
   border-radius: 20px;
-  /* border: 1px solid ${({ theme }) => theme.colors.black}; */
   list-style-type: none;
   margin-right: 5px;
   margin-top: 8px;
