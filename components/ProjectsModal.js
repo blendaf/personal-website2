@@ -44,7 +44,6 @@ export const Project1 = () => {
               ]}
             />
 
-            {/* <Title margin>More about the project</Title> */}
             <Paragraph>
               After a critical inspection of the HBO Nordic video streaming
               service we found that the usability of the service was lacking.
@@ -88,15 +87,14 @@ export const Project2 = () => {
             gaining insight into readers relationship to providing Bergens
             Tidende with news tip and improving the design of the digital news
             tip function.
+            <Pills
+              skills={[
+                'Semi-structured interviews',
+                'Usability testing',
+                'Thematic analysis',
+              ]}
+            />
           </About>
-
-          <Pills
-            skills={[
-              'Semi-structured interviews',
-              'Usability testing',
-              'Thematic analysis',
-            ]}
-          />
         </ProjectInfo>
       </ProjectWrapper>
     </Container>

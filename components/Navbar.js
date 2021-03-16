@@ -47,12 +47,6 @@ const Navbar = () => {
       <Link href="/experience">
         <StyledLink active={router.pathname !== '/'}>EXPERIENCE</StyledLink>
       </Link>
-      {/* <Link href="/">
-        <StyledLink>SKILLS</StyledLink>
-      </Link>
-      <Link href="/">
-        <StyledLink>HOME</StyledLink>
-      </Link> */}
     </NavWrapper>
   )
 }

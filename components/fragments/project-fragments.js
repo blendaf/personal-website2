@@ -149,6 +149,7 @@ export const Images = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 40px;
 
   @media screen and (max-width: ${screenSizes.tablet.max}) {
   }
@@ -156,6 +157,7 @@ export const Images = styled.div`
   @media screen and (max-width: ${screenSizes.phone.max}) {
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 20px;
   }
 `
 

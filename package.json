@@ -15,7 +15,7 @@
     "react-animate-on-scroll": "^2.1.5",
     "react-dom": "17.0.1",
     "react-modal": "^3.12.1",
-    "styled-components": "latest",
+    "styled-components": "^5.2.1",
     "styled-icons": "^10.29.0"
   },
   "devDependencies": {
