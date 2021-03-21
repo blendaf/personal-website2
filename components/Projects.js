@@ -1,17 +1,13 @@
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 import styled from 'styled-components'
 import screenSizes from '../utils/screen-sizes'
 import 'animate.css/animate.min.css'
 import ScrollAnimation from 'react-animate-on-scroll'
 
 const Container = styled.div`
-  width: 80%;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
   color: ${({ theme }) => theme.colors.black};
-
-  @media screen and (max-width: ${screenSizes.tablet.max}) {
-  }
 
   @media screen and (max-width: ${screenSizes.phone.max}) {
     width: 100%;
@@ -19,40 +15,36 @@ const Container = styled.div`
 `
 
 const Projects = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-top: 30px;
-  justify-content: center;
-  align-items: center;
-`
-
-const ProjectsRow = styled.div`
-  display: flex;
-
-  @media screen and (max-width: ${screenSizes.tablet.max}) {
-  }
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
 
   @media screen and (max-width: ${screenSizes.phone.max}) {
-    flex-direction: column;
-    /* flex-wrap: wrap; */
-    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+  }
+`
+
+const ProjectImageWrapper = styled.div`
+  display: grid;
+  grid-column-start: ${(props) => (props.middle ? '2' : 'auto')};
+
+  @media screen and (max-width: ${screenSizes.phone.max}) {
+    grid-column-start: ${(props) => (props.middle ? '1' : 'auto')};
   }
 `
 
 const ProjectImage = styled.div`
+  display: grid;
   width: 300px;
   height: 300px;
   border-radius: 50%;
   margin: 50px;
   background-color: blue;
+  align-items: center;
   background-image: ${(props) => `url(${props.background})`};
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
-
-  transform: ${(props) => (props.middle ? 'none' : 'translateY(200px)')};
+  transform: ${(props) =>
+    props.verticalOffset ? 'translateY(200px)' : 'none'};
 
   transition-duration: 0.8s;
   transition-property: transform;
@@ -61,22 +53,31 @@ const ProjectImage = styled.div`
 
   &:hover {
     transform: ${(props) =>
-      props.middle ? 'scale(1.1)' : 'translateY(200px) scale(1.1)'};
+      props.verticalOffset ? 'translateY(200px) scale(1.1)' : 'scale(1.1)'};
     box-shadow: ${({ theme }) => theme.boxShadow.intense};
   }
 
+  @media screen and (max-width: ${screenSizes.laptop.max}) {
+    margin: 30px;
+    transform: ${(props) =>
+      props.verticalOffset ? 'translateY(155px)' : 'none'};
+    width: 280px;
+    height: 280px;
+  }
+
   @media screen and (max-width: ${screenSizes.tablet.max}) {
-    transform: none;
-    margin: 10px;
-    width: 150px;
-    height: 150px;
+    transform: ${(props) =>
+      props.verticalOffset ? 'translateY(90px)' : 'none'};
+    margin: 20px;
+    width: 160px;
+    height: 160px;
   }
 
   @media screen and (max-width: ${screenSizes.phone.max}) {
     transform: none;
     margin: 10px;
-    width: 200px;
-    height: 200px;
+    width: 140px;
+    height: 140px;
   }
 `
 
@@ -92,7 +93,7 @@ const Header = () => {
   return (
     <Container>
       <Projects>
-        <ProjectsRow>
+        <ProjectImageWrapper>
           <ScrollAnimation
             offset={400}
             animateIn="animate__fadeIn"
@@ -102,11 +103,13 @@ const Header = () => {
             delay={10}
           >
             <Link key={1} href={`/?postId=${1}`} as={`/post/${1}`}>
-              <ProjectImage background={'/tv.jpg'}>
+              <ProjectImage verticalOffset background={'/tv.jpg'}>
                 <ProjectTitle>Usability Evaluation of HBO Nordic</ProjectTitle>
               </ProjectImage>
             </Link>
           </ScrollAnimation>
+        </ProjectImageWrapper>
+        <ProjectImageWrapper>
           <ScrollAnimation
             animateIn="animate__fadeIn"
             animatePreScroll={false}
@@ -115,13 +118,15 @@ const Header = () => {
             delay={2}
           >
             <Link key={2} href={`/?postId=${2}`} as={`/post/${2}`}>
-              <ProjectImage middle background={'/news.jpg'}>
+              <ProjectImage background={'/news.jpg'}>
                 <ProjectTitle>
                   Master Thesis: The News Tips Process at BT
                 </ProjectTitle>
               </ProjectImage>
             </Link>
           </ScrollAnimation>
+        </ProjectImageWrapper>
+        <ProjectImageWrapper>
           <ScrollAnimation
             offset={400}
             animateIn="animate__fadeIn"
@@ -131,15 +136,15 @@ const Header = () => {
             delay={10}
           >
             <Link key={3} href={`/?postId=${3}`} as={`/post/${3}`}>
-              <ProjectImage background={'/construct.jpeg'}>
+              <ProjectImage verticalOffset background={'/construct.jpeg'}>
                 <ProjectTitle>
                   Konstruct: AR city-wide outdoor gallery app
                 </ProjectTitle>
               </ProjectImage>
             </Link>
           </ScrollAnimation>
-        </ProjectsRow>
-        <ProjectsRow>
+        </ProjectImageWrapper>
+        <ProjectImageWrapper>
           <ScrollAnimation
             offset={300}
             animateIn="animate__fadeIn"
@@ -149,13 +154,15 @@ const Header = () => {
             delay={2}
           >
             <Link key={4} href={`/?postId=${4}`} as={`/post/${4}`}>
-              <ProjectImage background={'/speak.png'}>
+              <ProjectImage verticalOffset background={'/speak.png'}>
                 <ProjectTitle>
                   Speak.Exchange: A Bilingual Dictionary
                 </ProjectTitle>
               </ProjectImage>
             </Link>
           </ScrollAnimation>
+        </ProjectImageWrapper>
+        <ProjectImageWrapper>
           <ScrollAnimation
             animateIn="animate__fadeIn"
             animatePreScroll={false}
@@ -164,13 +171,15 @@ const Header = () => {
             delay={10}
           >
             <Link key={5} href={`/?postId=${5}`} as={`/post/${5}`}>
-              <ProjectImage middle background={'/Furhat.png'}>
+              <ProjectImage background={'/Furhat.png'}>
                 <ProjectTitle>
                   Teaching A Robot How To Cook: A Study of Embodiment
                 </ProjectTitle>
               </ProjectImage>
             </Link>
           </ScrollAnimation>
+        </ProjectImageWrapper>
+        <ProjectImageWrapper>
           <ScrollAnimation
             offset={300}
             animateIn="animate__fadeIn"
@@ -180,13 +189,13 @@ const Header = () => {
             delay={10}
           >
             <Link key={6} href={`/?postId=${6}`} as={`/post/${6}`}>
-              <ProjectImage background={'/ewallet.jpg'}>
+              <ProjectImage verticalOffset background={'/ewallet.jpg'}>
                 <ProjectTitle>Usability Of An E-wallet</ProjectTitle>
               </ProjectImage>
             </Link>
           </ScrollAnimation>
-        </ProjectsRow>
-        <ProjectsRow>
+        </ProjectImageWrapper>
+        <ProjectImageWrapper middle>
           <ScrollAnimation
             animateIn="animate__fadeIn"
             animatePreScroll={false}
@@ -195,38 +204,12 @@ const Header = () => {
             delay={2}
           >
             <Link key={7} href={`/?postId=${7}`} as={`/post/${7}`}>
-              <ProjectImage middle background={'/commuter.jpg'}>
+              <ProjectImage background={'/commuter.jpg'}>
                 <ProjectTitle>STHLM Commuter</ProjectTitle>
               </ProjectImage>
             </Link>
           </ScrollAnimation>
-          {/* <ScrollAnimation
-            animateIn="animate__fadeIn"
-            animatePreScroll={false}
-            animateOnce={true}
-            duration={2}
-            delay={2}
-          >
-            <Link key={8} href={`/?postId=${8}`} as={`/post/${8}`}>
-              <ProjectImage middle background={'/commuter.jpg'}>
-                <ProjectTitle>STHML Commuter</ProjectTitle>
-              </ProjectImage>
-            </Link>
-          </ScrollAnimation>
-          <ScrollAnimation
-            animateIn="animate__fadeIn"
-            animatePreScroll={false}
-            animateOnce={true}
-            duration={2}
-            delay={2}
-          >
-            <Link key={9} href={`/?postId=${9}`} as={`/post/${9}`}>
-              <ProjectImage background={'/commuter.jpg'}>
-                <ProjectTitle>STHML Commuter</ProjectTitle>
-              </ProjectImage>
-            </Link>
-          </ScrollAnimation> */}
-        </ProjectsRow>
+        </ProjectImageWrapper>
       </Projects>
     </Container>
   )
