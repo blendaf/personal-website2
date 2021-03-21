@@ -20,6 +20,7 @@ const Projects = styled.div`
 
   @media screen and (max-width: ${screenSizes.phone.max}) {
     grid-template-columns: 1fr 1fr;
+    padding-top: 20px;
   }
 `
 

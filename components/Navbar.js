@@ -44,8 +44,13 @@ const Navbar = () => {
       <Link href="/">
         <StyledLink active={router.pathname === '/'}>PROJECTS</StyledLink>
       </Link>
+      <Link href="/about">
+        <StyledLink active={router.pathname === '/about'}>ABOUT</StyledLink>
+      </Link>
       <Link href="/experience">
-        <StyledLink active={router.pathname !== '/'}>EXPERIENCE</StyledLink>
+        <StyledLink active={router.pathname === '/experience'}>
+          EXPERIENCE
+        </StyledLink>
       </Link>
     </NavWrapper>
   )

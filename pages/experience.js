@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import Header from '../components/Header'
+import Education from '../components/Education'
+import WorkExperience from '../components/WorkExperience'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import 'animate.css/animate.min.css'
@@ -7,7 +8,7 @@ import ScrollAnimation from 'react-animate-on-scroll'
 import screenSizes from '../utils/screen-sizes'
 
 const Container = styled.div`
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   color: ${({ theme }) => theme.colors.black};
 
@@ -21,74 +22,6 @@ const Container = styled.div`
 const Title = styled.h2`
   color: ${({ theme }) => theme.colors.primary};
   text-align: center;
-`
-
-const EducationWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 80px 0px;
-  text-align: center;
-  @media screen and (max-width: ${screenSizes.tablet.max}) {
-  }
-
-  @media screen and (max-width: ${screenSizes.phone.max}) {
-    margin: 40px 0px;
-  }
-`
-
-const EducationTitle = styled.h3`
-  margin: 5px auto;
-  margin-bottom: 15px;
-`
-
-const StyledLink = styled.a`
-  text-decoration: none;
-  cursor: pointer;
-  transform: translateZ(0);
-  transition-duration: 0.3s;
-  transition-property: transform;
-  color: ${({ theme }) => theme.colors.black};
-  margin: 5px 0px;
-
-  &:hover {
-    color: ${({ theme }) => theme.colors.hoverBlue};
-    transform: scale(1.1);
-  }
-
-  &:active {
-    color: ${({ theme }) => theme.colors.activeBlue};
-  }
-`
-
-const ExperienceWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 80px 0px;
-  @media screen and (max-width: ${screenSizes.tablet.max}) {
-  }
-
-  @media screen and (max-width: ${screenSizes.phone.max}) {
-    margin: 40px 0px;
-  }
-`
-
-const ExperienceTitle = styled.h3`
-  margin-bottom: 10px;
-  text-align: center;
-`
-
-const ExperienceDescription = styled.div`
-  text-align: center;
-  margin-bottom: 20px;
-`
-
-const ExperienceLine = styled.div`
-  border-right: 5px solid ${({ theme }) => theme.colors.black};
-  height: 40px;
 `
 
 const VolunteerWrapper = styled.div`
@@ -156,6 +89,8 @@ const VolunteerImage = styled.a`
   }
 
   @media screen and (max-width: ${screenSizes.tablet.max}) {
+    width: 250px;
+    height: 250px;
   }
 
   @media screen and (max-width: ${screenSizes.phone.max}) {
@@ -172,11 +107,13 @@ const VolunteerTitle = styled.h3`
 
 const VolunteerInfo = styled.div`
   margin-top: 10px;
+  width: 80%;
 
   @media screen and (max-width: ${screenSizes.tablet.max}) {
   }
 
   @media screen and (max-width: ${screenSizes.phone.max}) {
+    width: 100%;
   }
 `
 
@@ -184,117 +121,8 @@ const Experience = () => (
   <>
     <Navbar />
     <Container>
-      <ScrollAnimation
-        animateIn="animate__fadeIn"
-        animateOnce={true}
-        duration={2}
-        delay={10}
-      >
-        <EducationWrapper>
-          <Title>Education</Title>
-          <EducationTitle>
-            Degree Program in Information and Communication Technology
-          </EducationTitle>
-          <StyledLink href="https://www.kth.se/utbildning/civilingenjor/informationsteknik/utbildningsbeskrivning-1.4120">
-            BSc: Information &amp; Communication Technology
-          </StyledLink>
-          <StyledLink href="https://www.kth.se/student/kurser/program/TIVNM/20182/mal?l=en">
-            MCs: ICT Innovation &amp; Human-Computer Interaction
-          </StyledLink>
-          <StyledLink href="https://www.ntu.edu.sg/Pages/home.aspx">
-            Exchange semester at NTU SingaporeMCs: ICT Innovation &amp;
-            Human-Computer Interaction
-          </StyledLink>
-        </EducationWrapper>
-      </ScrollAnimation>
-
-      <ScrollAnimation
-        animateIn="animate__fadeIn"
-        animateOnce={true}
-        duration={2}
-        delay={800}
-      >
-        <ExperienceWrapper>
-          <Title>Work Experience</Title>
-          <ScrollAnimation
-            animateIn="animate__fadeIn"
-            animateOnce={true}
-            duration={2}
-            delay={10}
-          >
-            <ExperienceTitle>Schibsted Media Group</ExperienceTitle>
-            <ExperienceDescription>
-              January 2021 - June 2021 <br />
-              Master thesis student
-            </ExperienceDescription>
-            {/* <ExperienceDescription>Some text</ExperienceDescription> */}
-          </ScrollAnimation>
-          <ScrollAnimation
-            animateIn="animate__fadeIn"
-            animateOnce={true}
-            duration={2}
-            delay={10}
-          >
-            <ExperienceLine />
-          </ScrollAnimation>
-          <ScrollAnimation
-            animateIn="animate__fadeIn"
-            animateOnce={true}
-            duration={2}
-            delay={10}
-          >
-            <ExperienceTitle>Proximion</ExperienceTitle>
-            <ExperienceDescription>
-              December 2020 - January 2021 <br />
-              UX Consultant
-            </ExperienceDescription>
-
-            {/* <ExperienceDescription>Some text</ExperienceDescription> */}
-          </ScrollAnimation>
-          <ScrollAnimation
-            animateIn="animate__fadeIn"
-            animateOnce={true}
-            duration={2}
-            delay={10}
-          >
-            <ExperienceLine />
-          </ScrollAnimation>
-          <ScrollAnimation
-            animateIn="animate__fadeIn"
-            animateOnce={true}
-            duration={2}
-            delay={10}
-          >
-            <ExperienceTitle>Cantemo</ExperienceTitle>
-            <ExperienceDescription>
-              March 2020 - September 2020 <br />
-              Tester
-            </ExperienceDescription>
-            {/* <ExperienceDescription>Some text</ExperienceDescription> */}
-          </ScrollAnimation>
-          <ScrollAnimation
-            animateIn="animate__fadeIn"
-            animateOnce={true}
-            duration={2}
-            delay={10}
-          >
-            <ExperienceLine />
-          </ScrollAnimation>
-          <ScrollAnimation
-            animateIn="animate__fadeIn"
-            animateOnce={true}
-            duration={2}
-            delay={10}
-          >
-            <ExperienceTitle>Hello World!</ExperienceTitle>
-            <ExperienceDescription>
-              JMarch 2019 - September 2018 <br />
-              Programming Teacher
-            </ExperienceDescription>
-            {/* <ExperienceDescription>Some text</ExperienceDescription> */}
-          </ScrollAnimation>
-        </ExperienceWrapper>
-      </ScrollAnimation>
+      <Education />
+      <WorkExperience />
       <VolunteerWrapper>
         <ScrollAnimation
           animateIn="animate__fadeIn"
