@@ -112,7 +112,7 @@ const WorkExperience = () => (
       >
         <ExperienceTitle>Cantemo</ExperienceTitle>
         <ExperienceDescription>
-          March 2020 - September 2020 <br />
+          March 2020 - July  2020 <br />
           Tester
         </ExperienceDescription>
         <ExperienceDescription>
