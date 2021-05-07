@@ -91,7 +91,9 @@ export const Project2 = () => {
               skills={[
                 'Semi-structured interviews',
                 'Usability testing',
-                'Thematic analysis',
+                'Affinity Diagramming',
+                'Personas',
+                'User Journey Mapping',
               ]}
             />
           </About>
