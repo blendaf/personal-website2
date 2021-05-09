@@ -71,7 +71,7 @@ const Education = () => (
         BSc: Information &amp; Communication Technology
       </StyledLink>
       <StyledLink href="https://www.kth.se/student/kurser/program/TIVNM/20182/mal?l=en">
-        MSC: ICT Innovation &amp; Human-Computer Interaction
+        MSc: ICT Innovation &amp; Human-Computer Interaction
       </StyledLink>
       <StyledLink href="https://www.ntu.edu.sg/Pages/home.aspx">
         Exchange semester at NTU SingaporeMCs: ICT Innovation &amp;
