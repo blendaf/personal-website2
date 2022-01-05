@@ -3,9 +3,6 @@ import theme from '../utils/theme'
 import Head from 'next/head'
 
 const GlobalStyle = createGlobalStyle`
-
-
-
   body {
     margin: 0;
     padding: 0;
@@ -61,10 +58,7 @@ const GlobalStyle = createGlobalStyle`
     @media screen and (max-width: 640px) {
       font-size: 12px;
     }
-    
 }
-
-
 `
 
 export default function App({ Component, pageProps }) {

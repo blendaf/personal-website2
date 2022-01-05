@@ -53,22 +53,27 @@ const ProjectImage = styled.div`
   backface-visibility: hidden;
 
   &:hover {
-    transform: ${(props) =>
-      props.verticalOffset ? 'translateY(200px) scale(1.1)' : 'scale(1.1)'};
+    transform: ${({ verticalOffset }) =>
+      verticalOffset ? 'translateY(200px) scale(1.1)' : 'scale(1.1)'};
     box-shadow: ${({ theme }) => theme.boxShadow.intense};
   }
 
   @media screen and (max-width: ${screenSizes.laptop.max}) {
     margin: 30px;
-    transform: ${(props) =>
-      props.verticalOffset ? 'translateY(155px)' : 'none'};
+    transform: ${({ verticalOffset }) =>
+      verticalOffset ? 'translateY(155px)' : 'none'};
     width: 280px;
     height: 280px;
+
+    &:hover {
+      transform: ${() => 'scale(1.1)'};
+      box-shadow: ${({ theme }) => theme.boxShadow.intense};
+    }
   }
 
   @media screen and (max-width: ${screenSizes.tablet.max}) {
-    transform: ${(props) =>
-      props.verticalOffset ? 'translateY(90px)' : 'none'};
+    transform: ${({ verticalOffset }) =>
+      verticalOffset ? 'translateY(90px)' : 'none'};
     margin: 20px;
     width: 160px;
     height: 160px;
@@ -96,14 +101,13 @@ const Header = () => {
       <Projects>
         <ProjectImageWrapper>
           <ScrollAnimation
-            offset={400}
             animateIn="animate__fadeIn"
-            animatePreScroll={false}
+            animatePreScroll={true}
             animateOnce={true}
-            duration={2}
+            duration={1}
             delay={10}
           >
-            <Link key={1} href={`/?postId=${1}`} as={`/post/${1}`}>
+            <Link key={1} href={`/myProjects/?postId=${1}`} as={`/post/${1}`}>
               <ProjectImage verticalOffset background={'/tv.jpg'}>
                 <ProjectTitle>Usability Evaluation of HBO Nordic</ProjectTitle>
               </ProjectImage>
@@ -113,12 +117,12 @@ const Header = () => {
         <ProjectImageWrapper>
           <ScrollAnimation
             animateIn="animate__fadeIn"
-            animatePreScroll={false}
+            animatePreScroll={true}
             animateOnce={true}
-            duration={2}
+            duration={1}
             delay={2}
           >
-            <Link key={2} href={`/?postId=${2}`} as={`/post/${2}`}>
+            <Link key={2} href={`/myProjects/?postId=${2}`} as={`/post/${2}`}>
               <ProjectImage background={'/news.jpg'}>
                 <ProjectTitle>
                   Master Thesis: The News Tips Process at BT
@@ -129,14 +133,13 @@ const Header = () => {
         </ProjectImageWrapper>
         <ProjectImageWrapper>
           <ScrollAnimation
-            offset={400}
             animateIn="animate__fadeIn"
-            animatePreScroll={false}
+            animatePreScroll={true}
             animateOnce={true}
-            duration={2}
+            duration={1}
             delay={10}
           >
-            <Link key={3} href={`/?postId=${3}`} as={`/post/${3}`}>
+            <Link key={3} href={`/myProjects/?postId=${3}`} as={`/post/${3}`}>
               <ProjectImage verticalOffset background={'/construct.jpeg'}>
                 <ProjectTitle>
                   Konstruct: AR city-wide outdoor gallery app
@@ -147,14 +150,14 @@ const Header = () => {
         </ProjectImageWrapper>
         <ProjectImageWrapper>
           <ScrollAnimation
-            offset={300}
             animateIn="animate__fadeIn"
-            animatePreScroll={false}
+            offset={300}
+            animatePreScroll={true}
             animateOnce={true}
-            duration={2}
+            duration={1}
             delay={2}
           >
-            <Link key={4} href={`/?postId=${4}`} as={`/post/${4}`}>
+            <Link key={4} href={`/myProjects/?postId=${4}`} as={`/post/${4}`}>
               <ProjectImage verticalOffset background={'/speak.png'}>
                 <ProjectTitle>
                   Speak.Exchange: A Bilingual Dictionary
@@ -166,12 +169,13 @@ const Header = () => {
         <ProjectImageWrapper>
           <ScrollAnimation
             animateIn="animate__fadeIn"
-            animatePreScroll={false}
+            offset={200}
+            animatePreScroll={true}
             animateOnce={true}
-            duration={2}
+            duration={1}
             delay={10}
           >
-            <Link key={5} href={`/?postId=${5}`} as={`/post/${5}`}>
+            <Link key={5} href={`/myProjects/?postId=${5}`} as={`/post/${5}`}>
               <ProjectImage background={'/Furhat.png'}>
                 <ProjectTitle>
                   Teaching A Robot How To Cook: A Study of Embodiment
@@ -182,14 +186,14 @@ const Header = () => {
         </ProjectImageWrapper>
         <ProjectImageWrapper>
           <ScrollAnimation
-            offset={300}
             animateIn="animate__fadeIn"
-            animatePreScroll={false}
+            offset={300}
+            animatePreScroll={true}
             animateOnce={true}
-            duration={2}
+            duration={1}
             delay={10}
           >
-            <Link key={6} href={`/?postId=${6}`} as={`/post/${6}`}>
+            <Link key={6} href={`/myProjects/?postId=${6}`} as={`/post/${6}`}>
               <ProjectImage verticalOffset background={'/ewallet.jpg'}>
                 <ProjectTitle>Usability Of An E-wallet</ProjectTitle>
               </ProjectImage>
@@ -199,12 +203,12 @@ const Header = () => {
         <ProjectImageWrapper middle>
           <ScrollAnimation
             animateIn="animate__fadeIn"
-            animatePreScroll={false}
+            animatePreScroll={true}
             animateOnce={true}
-            duration={2}
+            duration={1}
             delay={2}
           >
-            <Link key={7} href={`/?postId=${7}`} as={`/post/${7}`}>
+            <Link key={7} href={`/myProjects/?postId=${7}`} as={`/post/${7}`}>
               <ProjectImage background={'/commuter.jpg'}>
                 <ProjectTitle>STHLM Commuter</ProjectTitle>
               </ProjectImage>

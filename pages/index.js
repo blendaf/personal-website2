@@ -1,12 +1,29 @@
 import styled from 'styled-components'
 import Header from '../components/Header'
 import { useRouter } from 'next/router'
-import Modal from 'react-modal'
-import ModalContent from '../components/ModalContent'
-import Projects from '../components/Projects'
+import screenSizes from '../utils/screen-sizes'
+
 import Footer from '../components/Footer'
 
-Modal.setAppElement('#__next')
+const Container = styled.div`
+  width: 50%;
+  margin: 0 auto;
+  color: ${({ theme }) => theme.colors.black};
+
+  @media screen and (max-width: ${screenSizes.tablet.max}) {
+    width: 80%;
+  }
+
+  @media screen and (max-width: ${screenSizes.phone.max}) {
+    width: 80%;
+  }
+`
+const Title = styled.h2`
+  color: ${({ theme }) => theme.colors.primary};
+  text-align: center;
+`
+
+const Text = styled.div``
 
 const Home = () => {
   const router = useRouter()
@@ -14,31 +31,33 @@ const Home = () => {
   return (
     <>
       <Header />
-
-      <Modal
-        isOpen={!!router.query.postId}
-        onRequestClose={() => router.push('/')}
-        contentLabel="Post modal"
-        // className="modal-style"
-        // overlayClassName="overlay-style"
-        style={{
-          overlay: {
-            backgroundColor: 'rgba(193, 198, 199, 0.8)',
-          },
-          content: {
-            borderRadius: '4px',
-            padding: '0px',
-            top: '60px',
-            left: '50px',
-            right: '50px',
-            bottom: '60px',
-            border: '1px solid rgba(193, 198, 199, 0.8)',
-          },
-        }}
-      >
-        <ModalContent id={router.query.postId} pathname={router.pathname} />
-      </Modal>
-      <Projects />
+      <Container>
+        <Title>About Me</Title>
+        <Text>
+          I am a software developer experienced in JavaScript and passionate
+          about anything UX. I have worked with web and app development using
+          technologies such as React, React Native, Node, and Vue. I also have
+          experience in user research and interaction design having conducted
+          several usability studies, product development, and design projects.
+          My greatest strengths and contributions to a team are my strong
+          organizational skills, communication skills, and my customer
+          obsession.
+        </Text>
+        <br />
+        <Text>
+          Currently, I am working as an Engineer at Klarna, exploring the future
+          of online shopping in the Klarna app.
+        </Text>
+        <br />
+        <Text>Topics that interest me are:</Text>
+        <ul>
+          <li>Component design</li>
+          <li>Frontend architecture</li>
+          <li>Product development</li>
+          <li>Lean methodology</li>
+          <li>Reducing surface area for decision making</li>
+        </ul>
+      </Container>
       <Footer />
     </>
   )

@@ -8,7 +8,6 @@ export const Container = styled.div`
   color: ${({ theme }) => theme.colors.black};
   width: 84%;
   margin: 0 auto;
-  /* padding: 50px 0px; */
 `
 
 const ContactIcon = styled.a`
@@ -47,8 +46,8 @@ const StyledIcon = styled.svg`
   }
 `
 
-export const Back = () => (
-  <Link href={`/`}>
+export const Back = ({ backRef = '/myProjects' }) => (
+  <Link href={`${backRef}`}>
     <ContactIcon>
       <StyledIcon as={Cross}></StyledIcon>
     </ContactIcon>

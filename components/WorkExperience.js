@@ -13,7 +13,7 @@ const ExperienceWrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 80px 0px;
+  margin: 30px 0px;
   @media screen and (max-width: ${screenSizes.tablet.max}) {
   }
 
@@ -43,24 +43,49 @@ const ExperienceLine = styled.div`
   border-right: 5px solid ${({ theme }) => theme.colors.black};
   height: 40px;
 `
-const WorkExperience = () => (
+export const WorkExperience = () => (
   <ScrollAnimation
     animateIn="animate__fadeIn"
     animateOnce={true}
-    duration={2}
-    delay={800}
+    duration={1}
+    delay={0}
   >
     <ExperienceWrapper>
       <Title>Work Experience</Title>
       <ScrollAnimation
         animateIn="animate__fadeIn"
         animateOnce={true}
-        duration={2}
+        animatePreScroll={true}
+        duration={1}
+        delay={10}
+      >
+        <ExperienceTitle>Klarna</ExperienceTitle>
+        <ExperienceDescription>
+          August 2021 - current <br />
+          Engineer
+        </ExperienceDescription>
+        <ExperienceDescription>
+          Developing the shopping experience within the Klarna app. Working in
+          React Native and Node, mostly focusing on front-end development.
+        </ExperienceDescription>
+      </ScrollAnimation>
+      <ScrollAnimation
+        animateIn="animate__fadeIn"
+        animateOnce={true}
+        duration={1}
+        delay={10}
+      >
+        <ExperienceLine />
+      </ScrollAnimation>
+      <ScrollAnimation
+        animateIn="animate__fadeIn"
+        animateOnce={true}
+        duration={1}
         delay={10}
       >
         <ExperienceTitle>Schibsted Media Group</ExperienceTitle>
         <ExperienceDescription>
-          January 2021 - current <br />
+          January 2021 - June 2021 <br />
           Master thesis student
         </ExperienceDescription>
         <ExperienceDescription>
@@ -74,7 +99,7 @@ const WorkExperience = () => (
       <ScrollAnimation
         animateIn="animate__fadeIn"
         animateOnce={true}
-        duration={2}
+        duration={1}
         delay={10}
       >
         <ExperienceLine />
@@ -82,7 +107,7 @@ const WorkExperience = () => (
       <ScrollAnimation
         animateIn="animate__fadeIn"
         animateOnce={true}
-        duration={2}
+        duration={1}
         delay={10}
       >
         <ExperienceTitle>Proximion</ExperienceTitle>
@@ -99,7 +124,7 @@ const WorkExperience = () => (
       <ScrollAnimation
         animateIn="animate__fadeIn"
         animateOnce={true}
-        duration={2}
+        duration={1}
         delay={10}
       >
         <ExperienceLine />
@@ -107,12 +132,12 @@ const WorkExperience = () => (
       <ScrollAnimation
         animateIn="animate__fadeIn"
         animateOnce={true}
-        duration={2}
+        duration={1}
         delay={10}
       >
         <ExperienceTitle>Cantemo</ExperienceTitle>
         <ExperienceDescription>
-          March 2020 - July  2020 <br />
+          March 2020 - July 2020 <br />
           Tester
         </ExperienceDescription>
         <ExperienceDescription>
@@ -126,7 +151,7 @@ const WorkExperience = () => (
       <ScrollAnimation
         animateIn="animate__fadeIn"
         animateOnce={true}
-        duration={2}
+        duration={1}
         delay={10}
       >
         <ExperienceLine />
@@ -134,12 +159,12 @@ const WorkExperience = () => (
       <ScrollAnimation
         animateIn="animate__fadeIn"
         animateOnce={true}
-        duration={2}
+        duration={1}
         delay={10}
       >
         <ExperienceTitle>Hello World!</ExperienceTitle>
         <ExperienceDescription>
-          JMarch 2019 - September 2018 <br />
+          March 2019 - September 2018 <br />
           Programming Teacher
         </ExperienceDescription>
         <ExperienceDescription>
@@ -152,5 +177,3 @@ const WorkExperience = () => (
     </ExperienceWrapper>
   </ScrollAnimation>
 )
-
-export default WorkExperience

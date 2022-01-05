@@ -23,7 +23,7 @@ export const Pills = ({ skills }) => {
   return (
     <PillList>
       {skills.map((skill) => (
-        <Pill>{skill}</Pill>
+        <Pill key={skill}>{skill}</Pill>
       ))}
     </PillList>
   )

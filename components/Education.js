@@ -35,12 +35,12 @@ const StyledLink = styled.a`
   }
 `
 
-const EducationWrapper = styled.div`
+export const EducationWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 80px 0px;
+  margin: 30px 0px;
   text-align: center;
   @media screen and (max-width: ${screenSizes.tablet.max}) {
   }
@@ -55,11 +55,11 @@ const EducationTitle = styled.h3`
   margin-bottom: 15px;
 `
 
-const Education = () => (
+export const Education = () => (
   <ScrollAnimation
     animateIn="animate__fadeIn"
     animateOnce={true}
-    duration={2}
+    duration={1}
     delay={10}
   >
     <EducationWrapper>
@@ -80,5 +80,3 @@ const Education = () => (
     </EducationWrapper>
   </ScrollAnimation>
 )
-
-export default Education

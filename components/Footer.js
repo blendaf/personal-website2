@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   width: 100%;
   justify-content: center;
   cursor: default;
-  margin: 50px 0;
+  margin: 60px 0px 20px 0px;
   color: ${({ theme }) => theme.colors.black};
 
   @media screen and (max-width: ${screenSizes.tablet.max}) {
@@ -48,41 +48,43 @@ const StyledLink = styled.a`
   }
 `
 
-const Footer = () => {
+const Footer = ({ photocredit }) => {
   return (
     <Wrapper>
       <Copyright>Copyright Blenda Fröjdh 2021</Copyright>
 
-      <Photocredit>
-        Photographs by
-        <StyledLink href="https://unsplash.com/@mattiasdiesel">
-          Mattias Diesel,{' '}
-        </StyledLink>
-        <StyledLink href="https://unsplash.com/@adigold1">
-          Adi Goldstein,{' '}
-        </StyledLink>
-        <StyledLink href="https://unsplash.com/@hush52">
-          Hush Naidoo,{' '}
-        </StyledLink>
-        <StyledLink href="https://unsplash.com/@neonbrand">
-          NeONBRAND,{' '}
-        </StyledLink>
-        <StyledLink href="https://unsplash.com/@jonasleupe">
-          Jonas Leupe,{' '}
-        </StyledLink>
-        <StyledLink href="https://unsplash.com/@fixelgraphy?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
-          Fixelgraphy,{' '}
-        </StyledLink>
-        <StyledLink href="https://unsplash.com/@hejohnnyme">
-          Nikola Johnny Mirkovic, and{' '}
-        </StyledLink>
-        <StyledLink href="https://unsplash.com/@pinho">Pinho </StyledLink> on{' '}
-        Unsplash. Favicon made by
-        <StyledLink href="https://www.freepik.com">
-          Freepik
-        </StyledLink> from{' '}
-        <StyledLink href="https://www.flaticon.com/">flaticon.com</StyledLink>
-      </Photocredit>
+      {photocredit && (
+        <Photocredit>
+          Photographs by
+          <StyledLink href="https://unsplash.com/@mattiasdiesel">
+            Mattias Diesel,{' '}
+          </StyledLink>
+          <StyledLink href="https://unsplash.com/@adigold1">
+            Adi Goldstein,{' '}
+          </StyledLink>
+          <StyledLink href="https://unsplash.com/@hush52">
+            Hush Naidoo,{' '}
+          </StyledLink>
+          <StyledLink href="https://unsplash.com/@neonbrand">
+            NeONBRAND,{' '}
+          </StyledLink>
+          <StyledLink href="https://unsplash.com/@jonasleupe">
+            Jonas Leupe,{' '}
+          </StyledLink>
+          <StyledLink href="https://unsplash.com/@fixelgraphy?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+            Fixelgraphy,{' '}
+          </StyledLink>
+          <StyledLink href="https://unsplash.com/@hejohnnyme">
+            Nikola Johnny Mirkovic, and{' '}
+          </StyledLink>
+          <StyledLink href="https://unsplash.com/@pinho">Pinho </StyledLink> on{' '}
+          Unsplash. Favicon made by
+          <StyledLink href="https://www.freepik.com">
+            Freepik
+          </StyledLink> from{' '}
+          <StyledLink href="https://www.flaticon.com/">flaticon.com</StyledLink>
+        </Photocredit>
+      )}
     </Wrapper>
   )
 }

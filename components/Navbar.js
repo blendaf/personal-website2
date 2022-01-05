@@ -15,6 +15,8 @@ const NavWrapper = styled.div`
 
   @media screen and (max-width: ${screenSizes.phone.max}) {
     width: 80%;
+    margin: 20px auto;
+    margin-top: 40px;
   }
 `
 
@@ -42,14 +44,16 @@ const Navbar = () => {
   return (
     <NavWrapper>
       <Link href="/">
-        <StyledLink active={router.pathname === '/'}>PROJECTS</StyledLink>
-      </Link>
-      <Link href="/about">
-        <StyledLink active={router.pathname === '/about'}>ABOUT</StyledLink>
+        <StyledLink active={router.pathname === '/'}>ABOUT</StyledLink>
       </Link>
       <Link href="/experience">
         <StyledLink active={router.pathname === '/experience'}>
           EXPERIENCE
+        </StyledLink>
+      </Link>
+      <Link href="/myProjects">
+        <StyledLink active={router.pathname === '/myProjects'}>
+          PROJECTS
         </StyledLink>
       </Link>
     </NavWrapper>

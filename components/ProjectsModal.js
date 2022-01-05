@@ -22,7 +22,7 @@ import {
 export const Project1 = () => {
   return (
     <Container>
-      <Back />
+      <Back backRef={`/myProjects`} />
       <ProjectWrapper>
         <ProjectInfo>
           <ProjectImage src={'/medium/tv.jpg'}></ProjectImage>
@@ -77,7 +77,7 @@ export const Project1 = () => {
 export const Project2 = () => {
   return (
     <Container>
-      <Back />
+      <Back backRef={`/myProjects`} />
       <ProjectWrapper>
         <ProjectInfo>
           <ProjectImage src={'/medium/news.jpg'}></ProjectImage>
@@ -106,7 +106,7 @@ export const Project2 = () => {
 export const Project3 = () => {
   return (
     <Container>
-      <Back />
+      <Back backRef={`/myProjects`} />
       <ProjectWrapper>
         <ProjectInfo>
           <Video>
@@ -185,7 +185,7 @@ export const Project3 = () => {
 export const Project4 = () => {
   return (
     <Container>
-      <Back />
+      <Back backRef={`/myProjects`} />
       <ProjectWrapper>
         <ProjectInfo>
           <ProjectImage src={'/speak.png'}></ProjectImage>
@@ -262,7 +262,7 @@ export const Project4 = () => {
 export const Project5 = () => {
   return (
     <Container>
-      <Back />
+      <Back backRef={`/myProjects`} />
       <ProjectWrapper>
         <ProjectInfo>
           <ProjectImage src={'/Furhat.png'}></ProjectImage>
@@ -316,7 +316,7 @@ export const Project5 = () => {
 export const Project6 = () => {
   return (
     <Container>
-      <Back />
+      <Back backRef={`/myProjects`} />
       <ProjectWrapper>
         <ProjectInfo>
           <ProjectImage src={'/medium/ewallet.jpg'}></ProjectImage>
@@ -362,7 +362,7 @@ export const Project6 = () => {
 export const Project7 = () => {
   return (
     <Container>
-      <Back />
+      <Back backRef={`/myProjects`} />
       <ProjectWrapper>
         <ProjectInfo>
           <ProjectImage src={'/medium/commuter.jpg'}></ProjectImage>
