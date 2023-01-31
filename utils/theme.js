@@ -1,22 +1,12 @@
-// const fontNames = {
-//   title: 'Catamaran',
-//   text: 'Open Sans',
-// }
-
 const theme = {
   colors: {
     white: '#fff',
     black: 'rgba(33, 33, 33, 1)',
-    hoverBlue: 'rgba(42, 174, 198, 1)',
+    hoverGreen: '#71ab2a',
     hoverBlack: 'rgba(40, 45, 46, 0.5 )',
-    activeBlue: 'rgba(25, 104, 118, 1)',
-    // danger: 'hsl(0, 95%, 40%)',
-    // dangerMuted: 'hsl(0, 100%, 95%)',
+    activeGreen: '#71ab2a',
   },
-  //   fonts: {
-  //     title: `'${fontNames.title}', '${fontNames.text}', sans-serif`,
-  //     text: `'${fontNames.text}', sans-serif`,
-  //   },
+
   transparencies: {
     inactive: '0.5',
   },
@@ -35,7 +25,5 @@ const theme = {
     signsNormal: '12px',
   },
 }
-
-// export { fontNames }
 
 export default theme

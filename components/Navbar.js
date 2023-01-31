@@ -26,15 +26,15 @@ const StyledLink = styled.a`
   transition-duration: 0.3s;
   transition-property: transform;
   color: ${(props) =>
-    props.active ? props.theme.colors.hoverBlue : props.theme.colors.black};
+    props.active ? props.theme.colors.hoverGreen : props.theme.colors.black};
 
   &:hover {
-    color: ${({ theme }) => theme.colors.hoverBlue};
+    color: ${({ theme }) => theme.colors.hoverGreen};
     transform: scale(1.1);
   }
 
   &:active {
-    color: ${({ theme }) => theme.colors.activeBlue};
+    color: ${({ theme }) => theme.colors.activeGreen};
   }
 `
 

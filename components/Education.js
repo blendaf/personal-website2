@@ -26,12 +26,12 @@ const StyledLink = styled.a`
   margin: 5px 0px;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.hoverBlue};
+    color: ${({ theme }) => theme.colors.hoverGreen};
     transform: scale(1.1);
   }
 
   &:active {
-    color: ${({ theme }) => theme.colors.activeBlue};
+    color: ${({ theme }) => theme.colors.activeGreen};
   }
 `
 

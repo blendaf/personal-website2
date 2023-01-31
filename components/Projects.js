@@ -66,8 +66,8 @@ const ProjectImage = styled.div`
     height: 280px;
 
     &:hover {
-      transform: ${() => 'scale(1.1)'};
-      box-shadow: ${({ theme }) => theme.boxShadow.intense};
+      transform: ${({ verticalOffset }) =>
+        verticalOffset ? 'translateY(155px) scale(1.1)' : 'scale(1.1)'};
     }
   }
 
@@ -77,6 +77,11 @@ const ProjectImage = styled.div`
     margin: 20px;
     width: 160px;
     height: 160px;
+
+    &:hover {
+      transform: ${({ verticalOffset }) =>
+        verticalOffset ? 'translateY(90px) scale(1.1)' : 'scale(1.1)'};
+    }
   }
 
   @media screen and (max-width: ${screenSizes.phone.max}) {
@@ -93,6 +98,7 @@ const ProjectTitle = styled.h3`
   text-align: center;
   text-shadow: ${({ theme }) => theme.textShadow.regular};
   padding: 0px 2px;
+  font-size: 1em;
 `
 
 const Header = () => {

@@ -69,7 +69,7 @@ const VolunteerImage = styled.a`
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background-color: ${({ theme }) => theme.colors.hoverBlue};
+  background-color: ${({ theme }) => theme.colors.hoverGreen};
   background-image: ${(props) => `url(${props.background})`};
   background-size: cover;
   display: flex;

@@ -9,7 +9,7 @@ const PillList = styled.ul`
 
 const Pill = styled.li`
   padding: 5px 10px;
-  background-color: ${({ theme }) => theme.colors.hoverBlue};
+  background-color: ${({ theme }) => theme.colors.hoverGreen};
   color: ${({ theme }) => theme.colors.white};
   font-size: ${({ theme }) => theme.fontSize.signsNormal};
   font-weight: 700;

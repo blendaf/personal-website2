@@ -48,15 +48,6 @@ const Home = () => {
           Currently, I am working as an Engineer at Klarna, exploring the future
           of online shopping in the Klarna app.
         </Text>
-        <br />
-        <Text>Topics that interest me are:</Text>
-        <ul>
-          <li>Component design</li>
-          <li>Frontend architecture</li>
-          <li>Product development</li>
-          <li>Lean methodology</li>
-          <li>Reducing surface area for decision making</li>
-        </ul>
       </Container>
       <Footer />
     </>

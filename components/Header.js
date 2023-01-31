@@ -35,7 +35,7 @@ const Profile = styled.div`
 `
 
 const ProfileImage = styled.div`
-  background-color: ${({ theme }) => theme.colors.hoverBlue};
+  background-color: ${({ theme }) => theme.colors.hoverGreen};
   width: 300px;
   height: 300px;
   border-radius: 50%;
@@ -104,12 +104,12 @@ const ContactIcon = styled.a`
   margin-top: 10px;
   border-radius: 50px;
   &:hover > * {
-    color: ${({ theme }) => theme.colors.hoverBlue};
+    color: ${({ theme }) => theme.colors.hoverGreen};
     transform: scale(1.1);
   }
 
   &:active > * {
-    color: ${({ theme }) => theme.colors.activeBlue};
+    color: ${({ theme }) => theme.colors.activeGreen};
   }
 
   @media screen and (max-width: ${screenSizes.tablet.max}) {
@@ -148,9 +148,8 @@ const Header = () => {
           <ProfileImage />
           <ProfileInfo>
             <Name>Blenda Fröjdh</Name>
-            <Positions>
-              UX Researcher • Front-end Developer • Interaction Designer
-            </Positions>
+
+            <Positions>Software developer passionate about UX</Positions>
             <Contact>
               <ContactIcon href="https://www.linkedin.com/in/blendafrojdh/">
                 <StyledIcon as={Github}></StyledIcon>
@@ -166,30 +165,6 @@ const Header = () => {
         </Profile>
       </Container>
     </>
-
-    //   <NavWrapper>
-    //     <TitleWrapper>
-    //       <Link href="/" passHref>
-    //         <StyledLink active={pathname === '/'}>
-    //           <div>
-    //             <Title>speak.</Title>
-    //             <Title mutedColor>exchange</Title>
-    //           </div>
-    //           <Subtitle>bilingual dictionary</Subtitle>
-    //         </StyledLink>
-    //       </Link>
-    //       <Link href={fbContext.user ? '/repeat' : '/all-decks'} passHref>
-    //         <StyledLink active={pathname !== '/'}>
-    //           <div>
-    //             <Title>speak.</Title>
-    //             <Title mutedColor>repeat</Title>
-    //           </div>
-    //           <Subtitle>vocabulary trainer</Subtitle>
-    //         </StyledLink>
-    //       </Link>
-    //     </TitleWrapper>
-    //     <LogInButton />
-    //   </NavWrapper>
   )
 }
 

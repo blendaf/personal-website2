@@ -34,7 +34,7 @@ const StyledIcon = styled.svg`
   backface-visibility: hidden;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.hoverBlue};
+    color: ${({ theme }) => theme.colors.hoverGreen};
     transform: scale(1.1);
   }
 
@@ -140,7 +140,7 @@ export const StyledLink = styled.a`
   color: ${({ theme }) => theme.colors.black};
 
   &:hover {
-    color: ${({ theme }) => theme.colors.hoverBlue};
+    color: ${({ theme }) => theme.colors.hoverGreen};
   }
 `
 

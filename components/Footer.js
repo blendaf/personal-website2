@@ -44,15 +44,13 @@ const StyledLink = styled.a`
   transition-duration: 0.5s;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.hoverBlue};
+    color: ${({ theme }) => theme.colors.hoverGreen};
   }
 `
 
 const Footer = ({ photocredit }) => {
   return (
     <Wrapper>
-      <Copyright>Copyright Blenda Fröjdh 2021</Copyright>
-
       {photocredit && (
         <Photocredit>
           Photographs by
@@ -78,7 +76,7 @@ const Footer = ({ photocredit }) => {
             Nikola Johnny Mirkovic, and{' '}
           </StyledLink>
           <StyledLink href="https://unsplash.com/@pinho">Pinho </StyledLink> on{' '}
-          Unsplash. Favicon made by
+          Favicon created by Freepik - Flaticon
           <StyledLink href="https://www.freepik.com">
             Freepik
           </StyledLink> from{' '}
